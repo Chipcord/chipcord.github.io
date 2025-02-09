@@ -8,7 +8,6 @@ I'm a student busy with school, but in my freetime I'm a designer/developer
 [dribbble](https://dribbble.com/ChipCord)  
 
 [youtube](https://www.youtube.com/@Chipcord) 
-# My work  
 
 ## Games  
 [Rudy The Ravanger](https://chipcord.itch.io/rudy-the-ravanger)  
