@@ -1,5 +1,10 @@
 # Hi, I'm Chip  
 I'm a student busy with school, but in my freetime I'm a designer/developer
+[itch.io](chipcord.itch.io)  
+
+[dribbble](https://dribbble.com/ChipCord)  
+
+[youtube](https://www.youtube.com/@Chipcord) 
 # My work  
 
 ## Games  
