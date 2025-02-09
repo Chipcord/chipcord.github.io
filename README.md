@@ -1,5 +1,5 @@
 # Hi, I'm Chip  
-I'm a student busy with school, but in my freetime I'm a designer/developer.  
+I'm a student busy with school, but in my freetime I'm a <span style="color: red;">designer</span> and <span style="color: blue;">developer</span>.
 
 # My work  
 
