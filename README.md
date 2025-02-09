@@ -16,15 +16,15 @@ I'm a student busy with school, but in my freetime I'm a designer/developer
 
 <style>
   body {
-    background-color: #1E1E1E; /* Dark background */
-    color: white; /* Light text */
+    background-color: #1E1E1E; /* background */
+    color: #7A7A7A; /* text */
   }
 
   a {
-    color: red; /* Change all links to red */
+    color: #D4D4D4; /* links */
   }
 
   a:hover {
-    color: orange; /* Optional: Change link color when hovered */
+    color: #D72828; /* hover effect */
   }
 </style>
