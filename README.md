@@ -1,4 +1,4 @@
-# Hi, I'm Chip  
+# _Hi, I'm Chip_
 I'm a student busy with school, but in my freetime I'm a designer/developer
 
 ## Links
