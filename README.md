@@ -16,7 +16,7 @@ I'm a student busy with school, but in my freetime I'm a designer/developer
 
 <style>
   body {
-    background-color: #121212; /* Dark background */
+    background-color: #1E1E1E; /* Dark background */
     color: white; /* Light text */
   }
 </style>
