@@ -19,7 +19,7 @@ I'm a student busy with school, but in my freetime I'm a designer/developer
 ## Design  
 [Sticky Orange](https://dribbble.com/shots/24412439-Sticky-Orange-Posters)  
 
-[Designs from when I was young](https://scratch.mit.edu/studios/30114594/) 
+[Designs at scratch](https://scratch.mit.edu/studios/30114594/) 
 
 <style>
   body {
