@@ -16,15 +16,21 @@ I'm a student busy with school, but in my freetime I'm a designer/developer
 
 <style>
   body {
-    background-color: #1E1E1E; /* background */
-    color: #7A7A7A; /* text */
+    background-color: #1E1E1E; /* Background */
+    color: #7A7A7A; /* Text */
   }
 
   a {
-    color: #D4D4D4; /* links */
+    color: #D4D4D4; /* Links */
+    text-decoration: none; /* Removes underline from links */
   }
 
   a:hover {
-    color: #D72828; /* hover effect */
+    color: #D72828; /* Hover effect */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    border-bottom: none !important; /* Removes underline */
+    margin-bottom: 0; /* Adjust spacing if needed */
   }
 </style>
