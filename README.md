@@ -1,5 +1,8 @@
 # Hi, I'm Chip  
 I'm a student busy with school, but in my freetime I'm a designer/developer
+
+## Links
+
 [itch.io](chipcord.itch.io)  
 
 [dribbble](https://dribbble.com/ChipCord)  
