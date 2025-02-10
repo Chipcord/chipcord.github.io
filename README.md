@@ -23,6 +23,8 @@ I'm a student busy with school, but in my freetime I'm a designer/developer
 
 [Designs at scratch](https://scratch.mit.edu/studios/30114594/) 
 
+[I'm A Designer](https://dribbble.com/shots/25609991-I-m-A-Designer)
+
 <style>
   body {
     background-color: #1E1E1E; /* Background */
