@@ -17,13 +17,14 @@ I'm a student busy with school, but in my freetime I'm a designer/developer
 [Games from my early ages](https://scratch.mit.edu/studios/36278066/)  
 
 ## Design  
+
+[I'm A Designer](https://dribbble.com/shots/25609991-I-m-A-Designer)
+
 [Sticky Orange](https://dribbble.com/shots/24412439-Sticky-Orange-Posters)  
 
 [Chip Branding](https://dribbble.com/shots/25604024-Chip)
 
 [Designs at scratch](https://scratch.mit.edu/studios/30114594/) 
-
-[I'm A Designer](https://dribbble.com/shots/25609991-I-m-A-Designer)
 
 <style>
   body {
