@@ -31,13 +31,6 @@
             padding-top: 20px; /* Adds spacing from the top */
         }
 
-        .header {
-            font-family: 'Inter', sans-serif; /* Use Inter font */
-            font-size: 24px; /* Smaller size for the header */
-            color: #FFFFFF; /* White text color */
-            margin-bottom: 10px; /* Adds space below the header */
-        }
-
         .text-container {
             font-family: 'CircuitFont', Arial, sans-serif; /* Apply Custom Font */
             font-size: 20vw; /* Large text */
@@ -85,26 +78,37 @@
         .new-sentence a:hover {
             text-decoration: underline; /* Underline on hover */
         }
+
+        /* Header Style */
+        .header {
+            font-family: 'Inter', sans-serif; /* Use Inter font */
+            font-size: 24px; /* Smaller size for the header */
+            color: #FFFFFF; /* White text color */
+            margin-bottom: 10px; /* Adds space below the header */
+            text-align: left; /* Align header to the left */
+            margin-left: 10px; /* Move the header to the left */
+        }
     </style>
 </head>
 <body>
 
     <a href="https://chipcord.github.io" class="back-link">Back</a>
 
+    <!-- New sentence header added above the text paragraph -->
     <div class="header">
-        Custom Font Display
+        Circuit Typeface Description
     </div>
 
-    <div class="text-container">
-        When zombies arrive quickly fax Judge Pat.
-    </div>
-
-    <!-- New sentence added -->
+    <!-- New sentence added below -->
     <div class="new-sentence">
         <p>Circuit is a display-typeface designed by <a href="https://chipcord.github.io">chip</a> in 2025. The goal with this typeface 
         was to create a font with as little shapes and complications as possible. Most of the characters consist of just squares with
         two rounded corners, and two non-rounded. There are no major holes or dents, just simple cuts into the square. This makes for
         a font that fits perfectly in a grid-based system.</p>
+    </div>
+
+    <div class="text-container">
+        When zombies arrive quickly fax Judge Pat.
     </div>
 
 </body>
