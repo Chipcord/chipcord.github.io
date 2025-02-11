@@ -16,9 +16,9 @@
         }
 
         .container {
-            max-width: 70%; /* Smaller container width */
+            max-width: 80%; /* Smaller container width */
             width: 100%;
-            padding-left: 5%; /* Slight padding to the left */
+            padding-left: 5%;
             box-sizing: border-box;
         }
 
@@ -32,19 +32,19 @@
         }
 
         h1 {
-            font-size: 3vw; /* Much smaller scaling for the main title */
+            font-size: 4vw; /* Scaled size for larger screens */
             color: #D4D4D4; /* Set to the same color as links */
             margin-bottom: 8px;
         }
 
         p {
-            font-size: 1.8vw; /* Smaller scaling for paragraph text */
+            font-size: 2.5vw; /* Scaled size for larger screens */
             color: #D4D4D4; /* Set to the same color as links */
             margin-bottom: 15px;
         }
 
         h2 {
-            font-size: 2vw; /* Smaller scaling for section headers */
+            font-size: 3vw; /* Scaled size for larger screens */
             color: #D4D4D4; /* Set to the same color as links */
             margin-bottom: 10px;
         }
@@ -56,7 +56,53 @@
         .section a {
             display: block;
             margin-bottom: 6px;
-            font-size: 1.5vw; /* Even smaller font for links */
+            font-size: 2vw; /* Scaled size for larger screens */
+        }
+
+        /* Media Queries for Larger Screens (like Mac) */
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 32px; /* Fixed size for h1 on larger screens */
+            }
+
+            p {
+                font-size: 18px; /* Fixed size for paragraph on larger screens */
+            }
+
+            h2 {
+                font-size: 24px; /* Fixed size for section headers on larger screens */
+            }
+
+            .section a {
+                font-size: 16px; /* Fixed size for links on larger screens */
+            }
+
+            .container {
+                max-width: 60%; /* Smaller container for larger screens */
+            }
+        }
+
+        /* Media Queries for Smaller Screens (like mobile) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 6vw; /* Larger font size for h1 on smaller screens */
+            }
+
+            p {
+                font-size: 4vw; /* Larger font size for paragraph on smaller screens */
+            }
+
+            h2 {
+                font-size: 5vw; /* Larger font size for section headers on smaller screens */
+            }
+
+            .section a {
+                font-size: 4vw; /* Larger font size for links on smaller screens */
+            }
+
+            .container {
+                max-width: 90%; /* Make the container wider on small screens */
+            }
         }
     </style>
 </head>
