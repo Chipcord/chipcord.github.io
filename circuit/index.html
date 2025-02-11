@@ -23,17 +23,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* Align text at the top */
             height: 100vh;
+            padding-top: 20px; /* Adds spacing from the top */
         }
 
         .text-container {
             font-family: 'CircuitFont', Arial, sans-serif; /* Apply Custom Font */
             font-size: 20vw; /* Large text */
-            line-height: 193px; /* Set vertical spacing */
+            line-height: 1.2; /* Adjusted line-height */
             margin: 0; /* Remove default margins */
-            padding: 10px;
+            padding: 0;
             word-wrap: break-word;
+            max-width: 90%; /* Prevent text overflow */
         }
 
         .controls {
