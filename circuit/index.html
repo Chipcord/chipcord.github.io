@@ -9,7 +9,7 @@
     <style>
         @font-face {
             font-family: 'CircuitFont';
-            src: url('Circuit-Display.woff2') format('woff2'); /* Ensure correct path */
+            src: url('Circuit-Display.woff2') format('woff2'); /* Corrected font file */
             font-weight: normal;
             font-style: normal;
         }
@@ -25,19 +25,19 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            gap: 30px; /* Sets vertical spacing between flex children */
         }
 
         .text-container {
             font-family: 'CircuitFont', Arial, sans-serif; /* Apply Custom Font */
-            font-size: 20vw; /* Large text */
-            margin: 30px 0; /* Vertical spacing of 30px */
+            font-size: 10vw; /* Large text */
+            line-height: 30px; /* Set vertical spacing */
+            margin: 0; /* Remove default margins */
             padding: 10px;
             word-wrap: break-word;
         }
 
         .controls {
-            margin: 30px 0; /* Adds 30px vertical spacing */
+            margin-top: 20px;
             display: flex;
             gap: 10px;
             flex-direction: column;
