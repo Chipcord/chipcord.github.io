@@ -15,8 +15,8 @@
         }
 
         body {
-            background-color: #1E1E1E; /* Default dark background */
-            color: #D4D4D4; /* Default text color */
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text color */
             font-family: Arial, sans-serif; /* Fallback font */
             text-align: center;
             margin: 0;
@@ -37,21 +37,6 @@
             word-wrap: break-word;
             max-width: 90%; /* Prevent text overflow */
         }
-
-        .controls {
-            margin-top: 20px;
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        input[type="color"] {
-            border: none;
-            width: 50px;
-            height: 30px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -59,21 +44,6 @@
     <div class="text-container">
         When zombies arrive quickly fax Judge Pat.
     </div>
-
-    <div class="controls">
-        <label>Text Color: <input type="color" id="textColorPicker" value="#D4D4D4"></label>
-        <label>Background Color: <input type="color" id="bgColorPicker" value="#1E1E1E"></label>
-    </div>
-
-    <script>
-        document.getElementById('textColorPicker').addEventListener('input', function() {
-            document.querySelector('.text-container').style.color = this.value;
-        });
-
-        document.getElementById('bgColorPicker').addEventListener('input', function() {
-            document.body.style.backgroundColor = this.value;
-        });
-    </script>
 
 </body>
 </html>
