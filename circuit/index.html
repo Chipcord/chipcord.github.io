@@ -111,12 +111,22 @@
             margin-top: 10px; /* Space between header and text */
             margin-right: 400px;
         }
+
+        /* Style for links in additional sections */
+        .additional-section a {
+            color: #FFFFFF; /* Make the link white */
+            text-decoration: none; /* Remove default underline */
+            z-index: 10; /* Ensure the link is clickable */
+        }
+
+        .additional-section a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
     </style>
 </head>
 <body>
 
     <a href="https://chipcord.github.io" class="back-link">Back</a>
-    <a href="https://creativecommons.org/licenses/by-nd/4.0/" class="back-link">Back</a>
 
     <!-- Existing Header -->
     <div class="header">
@@ -136,7 +146,7 @@
         <div class="additional-section-header">License</div>
         <div class="additional-section-text">
             <p>Circuit © 2025 by Chip is licensed under Creative Commons Attribution-NoDerivatives 4.0 International.
-<a href="https://creativecommons.org/licenses/by-nd/4.0/">Full license details</a></p>
+            <a href="https://creativecommons.org/licenses/by-nd/4.0/">Full license details</a></p>
         </div>
     </div>
 
