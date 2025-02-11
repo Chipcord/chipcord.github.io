@@ -14,6 +14,9 @@
             font-style: normal;
         }
 
+        /* Link to Google Material Icons */
+        @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
         body {
             background-color: #000000; /* Black background */
             color: #FFFFFF; /* White text color */
@@ -37,9 +40,29 @@
             word-wrap: break-word;
             max-width: 90%; /* Prevent text overflow */
         }
+
+        /* Style for the back arrow */
+        .back-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 40px;
+            color: #FFFFFF; /* Default white color */
+            cursor: pointer;
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        .back-arrow:hover {
+            color: #D72828; /* Hover effect color */
+        }
     </style>
 </head>
 <body>
+
+    <!-- Back Arrow Icon -->
+    <a href="https://chipcord.github.io" class="back-arrow">
+        <span class="material-icons">arrow_back</span>
+    </a>
 
     <div class="text-container">
         When zombies arrive quickly fax Judge Pat.
