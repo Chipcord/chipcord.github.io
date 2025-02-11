@@ -8,8 +8,8 @@
     <!-- Load Custom Font -->
     <style>
         @font-face {
-            font-family: 'Circuit';
-            src: url('font.woff2') format('woff2'); /* Corrected path */
+            font-family: 'CircuitFont';
+            src: url('font.woff2') format('woff2'); /* Ensure correct path */
             font-weight: normal;
             font-style: normal;
         }
@@ -17,7 +17,7 @@
         body {
             background-color: #1E1E1E; /* Default dark background */
             color: #D4D4D4; /* Default text color */
-            font-family: 'CircuitFont', Arial, sans-serif;
+            font-family: Arial, sans-serif; /* Fallback font */
             text-align: center;
             margin: 0;
             display: flex;
@@ -28,6 +28,7 @@
         }
 
         .text-container {
+            font-family: 'CircuitFont', Arial, sans-serif; /* Apply Custom Font */
             font-size: 10vw; /* Large text */
             margin: 0; /* Remove default margins */
             padding: 10px;
