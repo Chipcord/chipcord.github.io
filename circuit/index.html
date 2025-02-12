@@ -34,11 +34,11 @@
 
         .text-container {
             font-family: 'Circuit', Arial, sans-serif;
-            font-size: 20vw;
+            font-size: clamp(8vw, 10vw, 20vw); /* Scales dynamically within a range */
             line-height: 0.68;
             margin: 0;
             padding: 0;
-            word-wrap: break-word;
+            word-wrap: break-word; /* Ensure words break if needed */
             max-width: 90%;
             display: inline-block;
         }
@@ -112,47 +112,45 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 60px; /* Increased margin to make the space larger */
+            margin-top: 60px;
         }
 
         .typography-images img {
-            width: 25vw; /* Scales the images based on viewport width */
+            width: 25vw;
             height: auto;
             transition: transform 0.3s ease, z-index 0.3s ease;
             position: relative;
-            z-index: 1; /* Default z-index */
+            z-index: 1;
         }
 
-        /* Hover effect to scale the images, but only if no other image is enlarged */
         .typography-images img.hovered {
-            transform: scale(1.3); /* Increase size by 30% */
-            z-index: 10; /* Ensure the hovered image is always in front */
+            transform: scale(1.3);
+            z-index: 10;
         }
 
-        /* Prevent scaling of images when another one is enlarged */
         .typography-images img:not(.hovered) {
-            transform: scale(1); /* Ensure non-hovered images are not scaled */
-            z-index: 1; /* Ensure non-hovered images are behind */
+            transform: scale(1);
+            z-index: 1;
         }
 
         /* Media query for small screens */
         @media (max-width: 600px) {
             body {
-                padding-top: 60px; /* Adjust padding to make room for text on small screens */
+                padding-top: 60px;
             }
 
             .text-container {
-                font-size: 30vw; /* Make the text bigger on mobile */
+                font-size: clamp(8vw, 10vw, 20vw); /* Scales dynamically within a range */
             }
 
             .typography-images {
-                flex-direction: column; /* Stack images vertically */
-                gap: 10px; /* Adjust space between images */
-                align-items: center; /* Ensure images are centered */
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
             }
 
             .typography-images img {
-                width: 80vw; /* Make images larger on smaller screens */
+                width: 80vw;
             }
         }
     </style>
@@ -200,13 +198,11 @@
 
         images.forEach(image => {
             image.addEventListener('mouseenter', () => {
-                // Remove 'hovered' class from all images before applying to the current one
                 images.forEach(img => img.classList.remove('hovered'));
                 image.classList.add('hovered');
             });
 
             image.addEventListener('mouseleave', () => {
-                // Remove 'hovered' class when mouse leaves the image
                 image.classList.remove('hovered');
             });
         });
