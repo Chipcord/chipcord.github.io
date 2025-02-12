@@ -41,6 +41,7 @@
             word-wrap: break-word;
             max-width: 90%;
             display: inline-block;
+            margin-top: 40px; /* Added margin-top for mobile */
         }
 
         .back-link {
@@ -109,41 +110,52 @@
         }
 
         .typography-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 60px;
-}
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 60px;
+            align-items: center;
+            justify-content: center;
+        }
 
-.typography-images img {
-    width: 25vw; /* Scales the images based on viewport width */
-    height: auto;
-    transition: transform 0.3s ease, z-index 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
+        .typography-images img {
+            width: 25vw; /* Scales the images based on viewport width */
+            height: auto;
+            transition: transform 0.3s ease, z-index 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
 
-.typography-images img.hovered {
-    transform: scale(1.3);
-    z-index: 10;
-}
+        .typography-images img.hovered {
+            transform: scale(1.3);
+            z-index: 10;
+        }
 
-.typography-images img:not(.hovered) {
-    transform: scale(1);
-    z-index: 1;
-}
+        .typography-images img:not(.hovered) {
+            transform: scale(1);
+            z-index: 1;
+        }
 
-/* Media query for small screens */
-@media (max-width: 600px) {
-    .typography-images {
-        flex-direction: column; /* Stack images vertically */
-        gap: 10px; /* Adjust space between images */
-    }
+        /* Media query for small screens */
+        @media (max-width: 600px) {
+            body {
+                padding-top: 40px; /* Adjusted padding to push everything down */
+            }
 
-    .typography-images img {
-        width: 80vw; /* Make images larger on smaller screens */
-    }
-}
+            .text-container {
+                font-size: 35vw; /* Adjust text size for smaller screens */
+                margin-top: 10px; /* Ensure some space at the top for the text */
+            }
+
+            .typography-images {
+                flex-direction: column; /* Stack images vertically */
+                gap: 10px; /* Adjust space between images */
+            }
+
+            .typography-images img {
+                width: 80vw; /* Make images larger on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
