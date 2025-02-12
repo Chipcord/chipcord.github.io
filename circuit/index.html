@@ -33,15 +33,35 @@
         }
 
         .text-container {
-            font-family: 'Circuit', Arial, sans-serif;
-            font-size: clamp(16vw, 20vw, 40vw); /* Scales dynamically within a range */
-            line-height: 0.68;
-            margin: 0;
-            padding: 0;
-            word-wrap: break-word; /* Ensure words break if needed */
-            max-width: 90%;
-            display: inline-block;
-        }
+    font-family: 'Circuit', Arial, sans-serif;
+    font-size: clamp(12vw, 18vw, 40vw); /* More controlled scaling */
+    line-height: 0.68;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    max-width: 90%;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .text-container {
+        font-size: clamp(10vw, 12vw, 18vw); /* Prevent font from becoming too small */
+    }
+
+    .typography-images {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .typography-images img {
+        width: 80vw;
+    }
+}
 
         .back-link {
             position: absolute;
