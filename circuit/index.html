@@ -18,110 +18,72 @@
         }
 
         body {
-            background-color: #000000; /* Background */
-            color: #FFFFFF; /* Text */
-            font-family: Arial, sans-serif; /* Fallback font */
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Align text at the top */
+            justify-content: flex-start;
             height: 100vh;
-            padding-top: 20px; /* Adds spacing from the top */
+            padding-top: 20px;
         }
 
         .text-container {
-            font-family: 'Circuit', Arial, sans-serif; /* Apply custom font */
-            font-size: 20vw; /* Large text */
-            line-height: 0.68; /* Proportional line height */
-            margin: 0; /* Remove default margins */
+            font-family: 'Circuit', Arial, sans-serif;
+            font-size: 20vw;
+            line-height: 0.68;
+            margin: 0;
             padding: 0;
             word-wrap: break-word;
-            max-width: 90%; /* Prevent text overflow */
+            max-width: 90%;
             display: inline-block;
         }
 
-        /* Style for the 'Back' link using the Inter font */
         .back-link {
             position: absolute;
             top: 10px;
             left: 10px;
-            font-family: 'Inter', sans-serif; /* Apply Inter font */
-            font-size: 30px; /* Make the text bigger */
-            color: #FFFFFF; /* Default text color */
-            text-decoration: none; /* Remove default underline */
+            font-family: 'Inter', sans-serif;
+            font-size: 30px;
+            color: #FFFFFF;
+            text-decoration: none;
         }
 
         .back-link:hover {
-            color: #D72828; /* Color on hover */
-            text-decoration: underline; /* Underline on hover */
+            color: #D72828;
+            text-decoration: underline;
         }
 
-        /* Style for the new sentence under the pangram */
-        .new-sentence {
-            font-family: 'Inter', sans-serif; /* Use Inter font */
-            font-size: 20px; /* Slightly smaller than the 'Back' button */
-            color: #FFFFFF; /* White text color */
-            text-align: left; /* Align to the left */
-            margin-top: 20px; /* Add space above the new sentence */
-            position: absolute;
-            left: 10px; /* Position on the left side of the screen */
-            bottom: -700px; /* Move it further down */
-            margin-right: 400px;
-        }
-
-        /* Make links white */
-        .new-sentence a {
-            color: #FFFFFF;
-            text-decoration: none; /* Remove the default underline */
-        }
-
-        .new-sentence a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-
-        /* Header Style */
-        .header {
-            font-family: 'Inter', sans-serif; /* Use Inter font */
-            font-size: 14px; /* Slightly smaller than the 'Back' button */
-            color: #FFFFFF; /* White text color */
-            text-align: left; /* Align to the left */
-            margin-top: 20px; /* Add space above the new sentence */
-            position: absolute;
-            left: 10px; /* Position on the left side of the screen */
-            bottom: -560px; /* Move it further down */
-        }
-
-        /* Additional Sections Style */
-        .additional-section {
-            position: absolute;
-            left: 10px;
-            font-family: 'Inter', sans-serif;
-            color: #FFFFFF;
+        .section {
+            width: 90%;
+            max-width: 800px;
             text-align: left;
+            font-family: 'Inter', sans-serif;
+            margin: 10px auto;
         }
 
-        .additional-section-header {
-            font-size: 14px;
-            margin-top: 60px; /* Space above each header */
+        .section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 2px;
+            font-weight: normal;
         }
 
-        .additional-section-text {
-            font-size: 20px;
-            margin-top: 10px; /* Space between header and text */
-            margin-right: 400px;
+        .section p {
+            font-size: 1.3rem;
+            line-height: 1.4;
+            font-weight: normal;
         }
 
-        /* Style for links in additional sections */
-        .additional-section a {
-            color: #FFFFFF; /* Make the link white */
-            text-decoration: none; /* Remove default underline */
-            z-index: 10; /* Ensure the link is clickable */
+        .section a {
+            color: #FFFFFF;
+            text-decoration: none;
         }
 
-        .additional-section a:hover {
-            text-decoration: underline; /* Underline on hover */
+        .section a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -129,38 +91,26 @@
 
     <a href="https://chipcord.github.io" class="back-link">Back</a>
 
-    <!-- Existing Header -->
-    <div class="header">
-        About
+    <div class="text-container">
+        When zombies arrive quickly fax Judge Pat.
     </div>
 
-    <!-- Existing New Sentence -->
-    <div class="new-sentence">
+    <div class="section">
+        <h2>About</h2>
         <p>Circuit is a display-typeface designed by <a href="https://chipcord.github.io">chip</a> in 2025. The goal with this typeface 
-        was to create a font with as little shapes and complications as possible. Most of the characters consist of just squares with
-        two rounded corners, and two non-rounded. There are no major holes or dents, just simple cuts into the square. This makes for
+        was to create a font with as few shapes and complications as possible. Most of the characters consist of just squares with
+        two rounded corners and two non-rounded. There are no major holes or dents, just simple cuts into the square. This makes for
         a font that fits perfectly in a grid-based system.</p>
     </div>
 
-    <!-- First New Section -->
-    <div class="additional-section" style="bottom: -812px;">
-        <div class="additional-section-header">License</div>
-        <div class="additional-section-text">
-            <p>Circuit © 2025 by Chip is licensed under Creative Commons Attribution-NoDerivatives 4.0 International.</p>
-        </div>
+    <div class="section">
+        <h2>License</h2>
+        <p>Circuit © 2025 by Chip is licensed under Creative Commons Attribution-NoDerivatives 4.0 International.</p>
     </div>
 
-    <!-- Second New Section -->
-    <div class="additional-section" style="bottom: -900px;">
-        <div class="additional-section-header">Characters</div>
-        <div class="additional-section-text">
-            <p>41</p>
-        </div>
-    </div>
-
-    <!-- Font display -->
-    <div class="text-container">
-        When zombies arrive quickly fax Judge Pat.
+    <div class="section">
+        <h2>Characters</h2>
+        <p>41</p>
     </div>
 
 </body>
