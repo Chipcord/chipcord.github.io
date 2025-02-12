@@ -109,37 +109,41 @@
         }
 
         .typography-images {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 60px; /* Increased margin to make the space larger */
-        }
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+}
 
-        .typography-images img {
-            width: 25vw; /* Scales the images based on viewport width */
-            height: auto;
-            transition: transform 0.3s ease, z-index 0.3s ease;
-            position: relative; /* Make sure the image has a positioning context */
-            z-index: 1; /* Default z-index */
-        }
+.typography-images img {
+    width: 25vw; /* Scales the images based on viewport width */
+    height: auto;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
 
-        /* Hover effect to scale the images, but only if no other image is enlarged */
-        .typography-images img.hovered {
-            transform: scale(1.3); /* Increase size by 30% */
-            z-index: 10; /* Ensure the hovered image is always in front */
-        }
+.typography-images img.hovered {
+    transform: scale(1.3);
+    z-index: 10;
+}
 
-        /* Prevent scaling of images when another one is enlarged */
-        .typography-images img:not(.hovered) {
-            transform: scale(1); /* Ensure non-hovered images are not scaled */
-            z-index: 1; /* Ensure non-hovered images are behind */
-        }
+.typography-images img:not(.hovered) {
+    transform: scale(1);
+    z-index: 1;
+}
 
-        @media (max-width: 600px) {
-            body {
-                padding-top: 60px;
-            }
-        }
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .typography-images {
+        flex-direction: column; /* Stack images vertically */
+        gap: 10px; /* Adjust space between images */
+    }
+
+    .typography-images img {
+        width: 80vw; /* Make images larger on smaller screens */
+    }
+}
     </style>
 </head>
 <body>
