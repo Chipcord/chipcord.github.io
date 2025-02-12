@@ -34,14 +34,20 @@
 
         .text-container {
             font-family: 'Circuit', Arial, sans-serif;
-            font-size: 20vw; /* Font size based on viewport width */
-            line-height: 0.68;
+            font-size: 10vw; /* Font size based on viewport width */
+            line-height: 1.2;
             margin: 0;
             padding: 0;
             word-wrap: break-word;
             max-width: 90%;
-            display: inline-block;
-            margin-top: 40px; /* Added margin-top for mobile */
+            display: flex;
+            flex-direction: column; /* Stack words vertically */
+            align-items: center;
+        }
+
+        .text-container span {
+            margin: 10px 0; /* Add space between words */
+            white-space: nowrap; /* Prevent text from breaking within a word */
         }
 
         .back-link {
@@ -143,10 +149,7 @@
             }
 
             .text-container {
-                font-size: 30vw; /* Adjust text size for smaller screens */
-                margin-top: 10px; /* Ensure some space at the top for the text */
-                white-space: nowrap; /* Prevent text from breaking onto multiple lines */
-                overflow: hidden; /* Ensure text does not overflow */
+                font-size: 18vw; /* Adjust text size for smaller screens */
             }
 
             .typography-images {
@@ -162,10 +165,7 @@
         /* Media query for very small screens (extra small devices) */
         @media (max-width: 400px) {
             .text-container {
-                font-size: 45vw; /* Adjust text size even more on very small screens */
-                margin-top: 10px;
-                white-space: nowrap; /* Prevent text from breaking */
-                overflow: hidden; /* Hide overflowed text */
+                font-size: 25vw; /* Adjust text size even more on very small screens */
             }
         }
     </style>
@@ -175,7 +175,13 @@
     <a href="https://chipcord.github.io" class="back-link">Back</a>
 
     <div class="text-container">
-        When zombies arrive quickly fax Judge Pat.
+        <span>When</span>
+        <span>zombies</span>
+        <span>arrive</span>
+        <span>quickly</span>
+        <span>fax</span>
+        <span>Judge</span>
+        <span>Pat</span>
     </div>
 
     <a href="https://github.com/chipcord/chipcord.github.io/raw/main/circuit/Circuit%20Font.zip" class="download-button">Download</a>
