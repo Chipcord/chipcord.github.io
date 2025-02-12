@@ -26,8 +26,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            min-height: 120vh; /* Increased min-height for more scroll space */
+            min-height: 150vh; /* Increased to allow more scrolling */
             padding-top: 20px;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
@@ -112,21 +111,32 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 40px; /* Increased margin to match other sections */
+            margin-top: 60px; /* Increased margin to make the space larger */
         }
 
         .typography-images img {
             width: 25vw; /* Scales the images based on viewport width */
             height: auto;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, z-index 0s ease 0.3s;
             position: relative; /* Make sure the image has a positioning context */
             z-index: 1; /* Default z-index */
         }
 
-        /* Hover effect to scale the images */
-        .typography-images img.enlarged {
+        /* Hover effect to scale the images, but only if no other image is enlarged */
+        .typography-images img:hover {
             transform: scale(1.3); /* Increase size by 30% */
             z-index: 10; /* Ensure the hovered image is always in front */
+        }
+
+        /* Prevent scaling of images when another one is enlarged */
+        .typography-images img:not(:hover) {
+            transform: scale(1); /* Ensure non-hovered images are not scaled */
+            z-index: 1; /* Ensure non-hovered images are behind */
+        }
+
+        /* Adjust z-index logic to keep hovered image on top */
+        .typography-images img:hover ~ img {
+            z-index: 1; /* Ensure non-hovered images are in background */
         }
 
         @media (max-width: 600px) {
@@ -167,26 +177,11 @@
     <div class="section">
         <h2>Typography</h2>
         <div class="typography-images">
-            <img src="typography1.svg" alt="Typography Example 1" class="typography-img">
-            <img src="typography2.svg" alt="Typography Example 2" class="typography-img">
-            <img src="typography3.svg" alt="Typography Example 3" class="typography-img">
+            <img src="typography1.svg" alt="Typography Example 1">
+            <img src="typography2.svg" alt="Typography Example 2">
+            <img src="typography3.svg" alt="Typography Example 3">
         </div>
     </div>
-
-    <script>
-        const images = document.querySelectorAll('.typography-img');
-
-        images.forEach(image => {
-            image.addEventListener('mouseenter', () => {
-                images.forEach(img => img.classList.remove('enlarged')); // Remove enlargement from all images
-                image.classList.add('enlarged'); // Add enlargement to the hovered image
-            });
-
-            image.addEventListener('mouseleave', () => {
-                image.classList.remove('enlarged'); // Remove enlargement when not hovering
-            });
-        });
-    </script>
 
 </body>
 </html>
