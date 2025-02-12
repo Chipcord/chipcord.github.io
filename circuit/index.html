@@ -34,7 +34,6 @@
 
         .text-container {
             font-family: 'Circuit', Arial, sans-serif;
-            font-size: 10vw; /* Font size based on viewport width */
             line-height: 1.2;
             margin: 0;
             padding: 0;
@@ -142,7 +141,21 @@
             z-index: 1;
         }
 
-        /* Media query for small screens */
+        /* Media query for larger screens like Mac */
+        @media (min-width: 1024px) {
+            .text-container {
+                font-size: 6vw; /* Adjust text size for larger screens */
+            }
+        }
+
+        /* Media query for medium screens like tablets */
+        @media (max-width: 1023px) and (min-width: 768px) {
+            .text-container {
+                font-size: 8vw; /* Adjust text size for medium-sized screens */
+            }
+        }
+
+        /* Media query for smaller screens like mobile phones */
         @media (max-width: 600px) {
             body {
                 padding-top: 40px; /* Adjusted padding to push everything down */
