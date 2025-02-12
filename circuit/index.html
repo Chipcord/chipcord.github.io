@@ -62,7 +62,7 @@
             max-width: 800px;
             text-align: left;
             font-family: 'Inter', sans-serif;
-            margin: 6px auto;
+            margin: 20px auto;
         }
 
         .section h2 {
@@ -84,6 +84,12 @@
 
         .section a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding-top: 60px; /* Moves content down on very small screens */
+            }
         }
     </style>
 </head>
