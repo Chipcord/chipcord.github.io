@@ -27,7 +27,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            min-height: 100vh; /* Allow the body to extend and overflow */
+            min-height: 120vh; /* Increased min-height for more scroll space */
             padding-top: 20px;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
@@ -124,14 +124,9 @@
         }
 
         /* Hover effect to scale the images */
-        .typography-images img:hover {
+        .typography-images img.enlarged {
             transform: scale(1.3); /* Increase size by 30% */
             z-index: 10; /* Ensure the hovered image is always in front */
-        }
-
-        /* Prevent any images from overlapping or appearing behind others */
-        .typography-images img:hover ~ img {
-            z-index: 1; /* Reset the z-index for non-hovered images */
         }
 
         @media (max-width: 600px) {
@@ -172,11 +167,26 @@
     <div class="section">
         <h2>Typography</h2>
         <div class="typography-images">
-            <img src="typography1.svg" alt="Typography Example 1">
-            <img src="typography2.svg" alt="Typography Example 2">
-            <img src="typography3.svg" alt="Typography Example 3">
+            <img src="typography1.svg" alt="Typography Example 1" class="typography-img">
+            <img src="typography2.svg" alt="Typography Example 2" class="typography-img">
+            <img src="typography3.svg" alt="Typography Example 3" class="typography-img">
         </div>
     </div>
+
+    <script>
+        const images = document.querySelectorAll('.typography-img');
+
+        images.forEach(image => {
+            image.addEventListener('mouseenter', () => {
+                images.forEach(img => img.classList.remove('enlarged')); // Remove enlargement from all images
+                image.classList.add('enlarged'); // Add enlargement to the hovered image
+            });
+
+            image.addEventListener('mouseleave', () => {
+                image.classList.remove('enlarged'); // Remove enlargement when not hovering
+            });
+        });
+    </script>
 
 </body>
 </html>
