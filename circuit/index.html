@@ -145,6 +145,8 @@
             .text-container {
                 font-size: 35vw; /* Adjust text size for smaller screens */
                 margin-top: 10px; /* Ensure some space at the top for the text */
+                white-space: nowrap; /* Prevent text from breaking onto multiple lines */
+                overflow: hidden; /* Ensure text does not overflow */
             }
 
             .typography-images {
@@ -154,6 +156,16 @@
 
             .typography-images img {
                 width: 80vw; /* Make images larger on smaller screens */
+            }
+        }
+
+        /* Media query for very small screens (extra small devices) */
+        @media (max-width: 400px) {
+            .text-container {
+                font-size: 45vw; /* Adjust text size even more on very small screens */
+                margin-top: 10px;
+                white-space: nowrap; /* Prevent text from breaking */
+                overflow: hidden; /* Hide overflowed text */
             }
         }
     </style>
