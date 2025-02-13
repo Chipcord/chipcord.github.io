@@ -118,8 +118,8 @@
             display: none;
             pointer-events: none; /* Makes the image not interactable */
             z-index: 1000;
-            max-width: 200px; /* Maximum width limit */
-            min-width: 50px; /* Minimum width limit */
+            max-width: 300px; /* 50% larger max-width */
+            min-width: 75px; /* 50% larger min-width */
             width: auto; /* Let the image scale with the limits */
         }
 
@@ -180,10 +180,10 @@
 
                     // Apply the image width limits
                     hoverImage.style.width = 'auto'; // reset width to auto
-                    if (image.width > 200) { // Maximum width
-                        hoverImage.style.width = '200px';
-                    } else if (image.width < 50) { // Minimum width
-                        hoverImage.style.width = '50px';
+                    if (image.width > 300) { // Maximum width
+                        hoverImage.style.width = '300px';
+                    } else if (image.width < 75) { // Minimum width
+                        hoverImage.style.width = '75px';
                     }
                 };
                 image.onerror = function() {
@@ -191,7 +191,7 @@
                 };
                 image.src = imagePath;
 
-                // Position the image near the cursor
+                // Position the image near the cursor (to the right and slightly above)
                 document.addEventListener('mousemove', moveImage);
             });
 
@@ -202,9 +202,9 @@
             });
         });
 
-        // Function to move the image with the cursor
+        // Function to move the image with the cursor (slightly above and to the right)
         function moveImage(event) {
-            hoverImage.style.left = event.pageX + 10 + 'px'; // Position image slightly to the right of the cursor
+            hoverImage.style.left = event.pageX + 15 + 'px'; // Position image slightly to the right of the cursor
             hoverImage.style.top = event.pageY - 40 + 'px'; // Position image slightly above the cursor
         }
     </script>
