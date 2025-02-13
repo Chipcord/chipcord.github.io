@@ -191,7 +191,7 @@
                 };
                 image.src = imagePath;
 
-                // Position the image near the cursor (to the right and slightly above)
+                // Position the image near the cursor (slightly above and to the right)
                 document.addEventListener('mousemove', moveImage);
             });
 
@@ -205,7 +205,7 @@
         // Function to move the image with the cursor (slightly above and to the right)
         function moveImage(event) {
             hoverImage.style.left = event.pageX + 15 + 'px'; // Position image slightly to the right of the cursor
-            hoverImage.style.top = event.pageY - 40 + 'px'; // Position image slightly above the cursor
+            hoverImage.style.top = event.pageY - 50 + 'px'; // Position image slightly above the cursor (more than 40px)
         }
     </script>
 
