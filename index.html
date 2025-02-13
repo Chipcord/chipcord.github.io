@@ -169,7 +169,7 @@
         // Function to show the image on hover
         document.querySelectorAll('a').forEach(link => {
             link.addEventListener('mouseenter', function(event) {
-                const linkName = this.textContent.trim().toLowerCase().replace(/\s+/g, '-'); // Get the link name and format it
+                const linkName = this.textContent.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''); // Remove special characters
                 const imagePath = `${linkName}.png`; // Set the image path (same name as link)
                 
                 // Check if the image exists
