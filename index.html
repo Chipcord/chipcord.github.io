@@ -1,213 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chip's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet"> <!-- Added Inter font -->
-    
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.png" type="image/png"> <!-- Replace this with the path to your logo -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chip's Portfolio</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Added Inter font -->
 
-    <style>
-        body {
-            background-color: #1E1E1E; /* Background */
-            color: #7A7A7A; /* Text */
-            font-family: 'Inter', Arial, sans-serif; /* Changed font to Inter */
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.png" type="image/png" />
+        <!-- Replace this with the path to your logo -->
 
-        .container {
-            max-width: 80%; /* Smaller container width */
-            width: 100%;
-            padding-left: 5%;
-            box-sizing: border-box;
-        }
-
-        a {
-            color: #D4D4D4; /* Links */
-            text-decoration: none; /* Removes underline from links */
-        }
-
-        a:hover {
-            color: #D72828; /* Hover effect */
-        }
-
-        h1 {
-            font-size: 4vw; /* Scaled size for larger screens */
-            color: #D4D4D4; /* Set to the same color as links */
-            margin-bottom: 8px;
-        }
-
-        p {
-            font-size: 2.5vw; /* Scaled size for larger screens */
-            color: #D4D4D4; /* Set to the same color as links */
-            margin-bottom: 15px;
-        }
-
-        h2 {
-            font-size: 3vw; /* Scaled size for larger screens */
-            color: #7A7A7A; /* Color for smaller headings */
-            margin-bottom: 10px;
-        }
-
-        .section {
-            margin-bottom: 15px;
-        }
-
-        .section a {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 2vw; /* Scaled size for larger screens */
-        }
-
-        /* Media Queries for Larger Screens (like Mac) */
-        @media (min-width: 1024px) {
-            h1 {
-                font-size: 32px; /* Fixed size for h1 on larger screens */
-            }
-
-            p {
-                font-size: 18px; /* Fixed size for paragraph on larger screens */
-            }
-
-            h2 {
-                font-size: 24px; /* Fixed size for section headers on larger screens */
-            }
-
-            .section a {
-                font-size: 16px; /* Fixed size for links on larger screens */
+        <style>
+            body {
+                background-color: #1e1e1e; /* Background */
+                color: #7a7a7a; /* Text */
+                font-family: "Inter", Arial, sans-serif; /* Changed font to Inter */
+                margin: 0;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
             }
 
             .container {
-                max-width: 60%; /* Smaller container for larger screens */
-                padding-top: 50px; /* Adds extra space at the top on larger screens */
+                max-width: 80%; /* Smaller container width */
+                width: 100%;
+                padding-left: 5%;
+                box-sizing: border-box;
             }
-        }
 
-        /* Media Queries for Smaller Screens (like mobile) */
-        @media (max-width: 600px) {
+            a {
+                color: #d4d4d4; /* Links */
+                text-decoration: none; /* Removes underline from links */
+            }
+
+            a:hover {
+                color: #d72828; /* Hover effect */
+            }
+
             h1 {
-                font-size: 6vw; /* Larger font size for h1 on smaller screens */
+                font-size: 4vw; /* Scaled size for larger screens */
+                color: #d4d4d4; /* Set to the same color as links */
+                margin-bottom: 8px;
             }
 
             p {
-                font-size: 4vw; /* Larger font size for paragraph on smaller screens */
+                font-size: 2.5vw; /* Scaled size for larger screens */
+                color: #d4d4d4; /* Set to the same color as links */
+                margin-bottom: 15px;
             }
 
             h2 {
-                font-size: 5vw; /* Larger font size for section headers on smaller screens */
+                font-size: 3vw; /* Scaled size for larger screens */
+                color: #7a7a7a; /* Color for smaller headings */
+                margin-bottom: 10px;
+            }
+
+            .section {
+                margin-bottom: 15px;
             }
 
             .section a {
-                font-size: 4vw; /* Larger font size for links on smaller screens */
+                display: block;
+                margin-bottom: 6px;
+                font-size: 2vw; /* Scaled size for larger screens */
             }
 
-            .container {
-                max-width: 90%; /* Make the container wider on small screens */
-                padding-top: 20px; /* No extra space at the top for smaller screens */
+            /* Media Queries for Larger Screens (like Mac) */
+            @media (min-width: 1024px) {
+                h1 {
+                    font-size: 32px; /* Fixed size for h1 on larger screens */
+                }
+
+                p {
+                    font-size: 18px; /* Fixed size for paragraph on larger screens */
+                }
+
+                h2 {
+                    font-size: 24px; /* Fixed size for section headers on larger screens */
+                }
+
+                .section a {
+                    font-size: 16px; /* Fixed size for links on larger screens */
+                }
+
+                .container {
+                    max-width: 60%; /* Smaller container for larger screens */
+                    padding-top: 50px; /* Adds extra space at the top on larger screens */
+                }
             }
-        }
 
-        /* Add styling for the image */
-        .hover-image {
-            position: absolute;
-            display: none;
-            pointer-events: none; /* Makes the image not interactable */
-            z-index: 1000;
-            max-width: 300px; /* 50% larger max-width */
-            min-width: 75px; /* 50% larger min-width */
-            width: auto; /* Let the image scale with the limits */
-        }
+            /* Media Queries for Smaller Screens (like mobile) */
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 6vw; /* Larger font size for h1 on smaller screens */
+                }
 
-    </style>
-</head>
-<body>
+                p {
+                    font-size: 4vw; /* Larger font size for paragraph on smaller screens */
+                }
 
-    <div class="container">
-        <h1>Hi, I'm Chip</h1>
-        <p>I'm a student busy with school, but in my freetime I'm a designer/developer</p>
+                h2 {
+                    font-size: 5vw; /* Larger font size for section headers on smaller screens */
+                }
 
-        <div class="section">
-            <h2>Links</h2>
-            <a href="https://chipcord.itch.io">itch.io</a>
-            <a href="https://dribbble.com/ChipCord">dribbble</a>
-            <a href="https://www.youtube.com/@Chipcord">youtube</a>
+                .section a {
+                    font-size: 4vw; /* Larger font size for links on smaller screens */
+                }
+
+                .container {
+                    max-width: 90%; /* Make the container wider on small screens */
+                    padding-top: 20px; /* No extra space at the top for smaller screens */
+                }
+            }
+
+            /* Add styling for the image */
+            .hover-image {
+                position: absolute;
+                display: none;
+                pointer-events: none; /* Makes the image not interactable */
+                z-index: 1000;
+                max-width: 300px; /* 50% larger max-width */
+                min-width: 75px; /* 50% larger min-width */
+                width: auto; /* Let the image scale with the limits */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Hi, I'm Chip</h1>
+            <p>
+                I'm a student busy with school, but in my freetime I'm a
+                designer/developer
+            </p>
+
+            <div class="section">
+                <h2>Links</h2>
+                <a href="https://chipcord.itch.io">itch.io</a>
+                <a href="https://dribbble.com/ChipCord">dribbble</a>
+                <a href="https://www.youtube.com/@Chipcord">youtube</a>
+            </div>
+
+            <div class="section">
+                <h2>Games</h2>
+                <a href="https://chipcord.itch.io/rudy-the-ravanger"
+                    >Rudy The Ravanger</a
+                >
+                <a href="https://chipcord.itch.io/flower-finder"
+                    >Flowerfinder</a
+                >
+                <a href="https://scratch.mit.edu/studios/36278066/"
+                    >Games from my early ages</a
+                >
+            </div>
+
+            <div class="section">
+                <h2>Design</h2>
+                <a href="https://dribbble.com/shots/25609991-I-m-A-Designer"
+                    >I'm A Designer</a
+                >
+                <a
+                    href="https://dribbble.com/shots/24412439-Sticky-Orange-Posters"
+                    >Sticky Orange</a
+                >
+                <a href="https://dribbble.com/shots/25604024-Chip"
+                    >Chip Branding</a
+                >
+                <a href="https://scratch.mit.edu/studios/30114594/"
+                    >Designs at scratch</a
+                >
+            </div>
+
+            <div class="section">
+                <h2>Fonts</h2>
+                <a href="https://chipcord.github.io/circuit">Circuit</a>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Games</h2>
-            <a href="https://chipcord.itch.io/rudy-the-ravanger">Rudy The Ravanger</a>
-            <a href="https://chipcord.itch.io/flower-finder">Flowerfinder</a>
-            <a href="https://scratch.mit.edu/studios/36278066/">Games from my early ages</a>
-        </div>
+        <!-- Image that will be displayed on hover -->
+        <img id="hover-image" class="hover-image" src="" alt="hover image" />
 
-        <div class="section">
-            <h2>Design</h2>
-            <a href="https://dribbble.com/shots/25609991-I-m-A-Designer">I'm A Designer</a>
-            <a href="https://dribbble.com/shots/24412439-Sticky-Orange-Posters">Sticky Orange</a>
-            <a href="https://dribbble.com/shots/25604024-Chip">Chip Branding</a>
-            <a href="https://scratch.mit.edu/studios/30114594/">Designs at scratch</a>
-        </div>
+        <script>
+            // Get the image element
+            const hoverImage = document.getElementById("hover-image");
 
-        <div class="section">
-            <h2>Fonts</h2>
-            <a href="https://chipcord.github.io/circuit">Circuit</a>
-        </div>
-    </div>
+            // Function to show the image on hover
+            document.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("mouseenter", function (event) {
+                    const linkName = this.textContent
+                        .trim()
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")
+                        .replace(/[^a-z0-9\-]/g, ""); // Remove special characters
+                    const imagePath = `${linkName}.png`; // Set the image path (same name as link)
 
-    <!-- Image that will be displayed on hover -->
-    <img id="hover-image" class="hover-image" src="" alt="hover image" />
+                    // Check if the image exists
+                    const image = new Image();
+                    image.onload = function () {
+                        hoverImage.src = imagePath; // Set the source of the hover image
+                        hoverImage.style.display = "block"; // Show the image
 
-    <script>
-        // Get the image element
-        const hoverImage = document.getElementById('hover-image');
-        
-        // Function to show the image on hover
-        document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('mouseenter', function(event) {
-                const linkName = this.textContent.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''); // Remove special characters
-                const imagePath = `${linkName}.png`; // Set the image path (same name as link)
-                
-                // Check if the image exists
-                const image = new Image();
-                image.onload = function() {
-                    hoverImage.src = imagePath; // Set the source of the hover image
-                    hoverImage.style.display = 'block'; // Show the image
+                        // Apply the image width limits
+                        hoverImage.style.width = "auto"; // reset width to auto
+                        if (image.width > 300) {
+                            // Maximum width
+                            hoverImage.style.width = "300px";
+                        } else if (image.width < 75) {
+                            // Minimum width
+                            hoverImage.style.width = "75px";
+                        }
+                    };
+                    image.onerror = function () {
+                        hoverImage.style.display = "none"; // Hide the image if not found
+                    };
+                    image.src = imagePath;
 
-                    // Apply the image width limits
-                    hoverImage.style.width = 'auto'; // reset width to auto
-                    if (image.width > 300) { // Maximum width
-                        hoverImage.style.width = '300px';
-                    } else if (image.width < 75) { // Minimum width
-                        hoverImage.style.width = '75px';
-                    }
-                };
-                image.onerror = function() {
-                    hoverImage.style.display = 'none'; // Hide the image if not found
-                };
-                image.src = imagePath;
+                    // Position the image near the cursor (slightly above and to the right)
+                    document.addEventListener("mousemove", moveImage);
+                });
 
-                // Position the image near the cursor (slightly above and to the right)
-                document.addEventListener('mousemove', moveImage);
+                // Hide the image when the mouse leaves the link
+                link.addEventListener("mouseleave", function () {
+                    hoverImage.style.display = "none";
+                    document.removeEventListener("mousemove", moveImage);
+                });
             });
 
-            // Hide the image when the mouse leaves the link
-            link.addEventListener('mouseleave', function() {
-                hoverImage.style.display = 'none';
-                document.removeEventListener('mousemove', moveImage);
-            });
-        });
-
-        // Function to move the image with the cursor (slightly above and to the right)
-        function moveImage(event) {
-            hoverImage.style.left = event.pageX + 15 + 'px'; // Position image slightly to the right of the cursor
-            hoverImage.style.top = event.pageY - 200 + 'px'; // Position image slightly above the cursor (more than 40px)
-        }
-    </script>
-
-</body>
+            // Function to move the image with the cursor (slightly above and to the right)
+            function moveImage(event) {
+                hoverImage.style.left = event.pageX + 15 + "px"; // Position image slightly to the right of the cursor
+                hoverImage.style.top = event.pageY - 200 + "px"; // Position image slightly above the cursor (more than 40px)
+            }
+        </script>
+    </body>
 </html>

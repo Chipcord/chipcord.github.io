@@ -1,228 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circuit Font</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Circuit Font</title>
 
-    <!-- Load inter font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="icon" href="favicon.png" type="image/png" />
 
-    <!-- Font displayed -->
-    <style>
-        @font-face {
-            font-family: 'Circuit';
-            src: url('Circuit-Display.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
+        <!-- Load inter font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
 
-        body {
-            background-color: #000000;
-            color: #FFFFFF;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 250vh; /* Increased to allow more scrolling */
-            padding-top: 20px;
-            padding-bottom: 40px; /* Added padding at the bottom for extra space */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
+        <!-- Font displayed -->
+        <style>
+            @font-face {
+                font-family: "Circuit";
+                src: url("Circuit-Display.woff2") format("woff2");
+                font-weight: normal;
+                font-style: normal;
+            }
 
-        .text-container {
-    font-family: 'Circuit', Arial, sans-serif;
-    font-size: clamp(12vw, 18vw, 22vw); /* More controlled scaling */
-    line-height: 0.68;
-    margin: 0;
-    padding: 0;
-    word-wrap: break-word;
-    max-width: 90%;
-    display: inline-block;
-}
-
-@media (max-width: 600px) {
-    body {
-        padding-top: 60px;
-    }
-
-.typography-images {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .typography-images img {
-        width: 80vw;
-    }
-}
-
-        .back-link {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-family: 'Inter', sans-serif;
-            font-size: 30px;
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-
-        .back-link:hover {
-            color: #D72828;
-            text-decoration: underline;
-        }
-
-        .download-button {
-            margin-top: 40px;
-            background-color: #FFFFFF;
-            color: #000000;
-            font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .download-button:hover {
-            background-color: #D72828 !important;
-            color: #FFFFFF;
-        }
-
-        .section {
-            width: 90%;
-            max-width: 800px;
-            text-align: left;
-            font-family: 'Inter', sans-serif;
-            margin: 20px auto;
-        }
-
-        .section h2 {
-            font-size: 0.8rem;
-            margin-bottom: 0.7px;
-            font-weight: normal;
-        }
-
-        .section p {
-            font-size: 1.3rem;
-            line-height: 1.4;
-            font-weight: normal;
-        }
-
-        .section a {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-
-        .section a:hover {
-            text-decoration: underline;
-        }
-
-        .typography-images {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 60px;
-        }
-
-        .typography-images img {
-            width: 25vw;
-            height: auto;
-            transition: transform 0.2s ease, z-index 0.2s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .typography-images img.hovered {
-            transform: scale(1.1);
-            z-index: 10;
-        }
-
-        .typography-images img:not(.hovered) {
-            transform: scale(1);
-            z-index: 1;
-        }
-
-        /* Media query for small screens */
-        @media (max-width: 600px) {
             body {
-                padding-top: 60px;
+                background-color: #000000;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 250vh; /* Increased to allow more scrolling */
+                padding-top: 20px;
+                padding-bottom: 40px; /* Added padding at the bottom for extra space */
+                overflow-x: hidden; /* Prevent horizontal scrolling */
             }
 
             .text-container {
-                font-size: clamp(18vw, 20vw, 26vw); /* Scales dynamically within a range */
+                font-family: "Circuit", Arial, sans-serif;
+                font-size: clamp(
+                    12vw,
+                    18vw,
+                    22vw
+                ); /* More controlled scaling */
+                line-height: 0.68;
+                margin: 0;
+                padding: 0;
+                word-wrap: break-word;
+                max-width: 90%;
+                display: inline-block;
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    padding-top: 60px;
+                }
+
+                .typography-images {
+                    flex-direction: column;
+                    gap: 10px;
+                    align-items: center;
+                }
+
+                .typography-images img {
+                    width: 80vw;
+                }
+            }
+
+            .back-link {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-family: "Inter", sans-serif;
+                font-size: 30px;
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            .back-link:hover {
+                color: #d72828;
+                text-decoration: underline;
+            }
+
+            .download-button {
+                margin-top: 40px;
+                background-color: #ffffff;
+                color: #000000;
+                font-family: "Inter", sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 10px 20px;
+                border-radius: 50px;
+                border: none;
+                cursor: pointer;
+                transition:
+                    background-color 0.3s,
+                    color 0.3s;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            .download-button:hover {
+                background-color: #d72828 !important;
+                color: #ffffff;
+            }
+
+            .section {
+                width: 90%;
+                max-width: 800px;
+                text-align: left;
+                font-family: "Inter", sans-serif;
+                margin: 20px auto;
+            }
+
+            .section h2 {
+                font-size: 0.8rem;
+                margin-bottom: 0.7px;
+                font-weight: normal;
+            }
+
+            .section p {
+                font-size: 1.3rem;
+                line-height: 1.4;
+                font-weight: normal;
+            }
+
+            .section a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            .section a:hover {
+                text-decoration: underline;
             }
 
             .typography-images {
-                flex-direction: column;
-                gap: 10px;
-                align-items: center;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 60px;
             }
 
             .typography-images img {
-                width: 80vw;
+                width: 25vw;
+                height: auto;
+                transition:
+                    transform 0.2s ease,
+                    z-index 0.2s ease;
+                position: relative;
+                z-index: 1;
             }
-        }
-    </style>
-</head>
-<body>
 
-    <a href="https://chipcord.github.io" class="back-link">Back</a>
+            .typography-images img.hovered {
+                transform: scale(1.1);
+                z-index: 10;
+            }
 
-    <div class="text-container">
-        When zombies arrive quickly fax Judge Pat.
-    </div>
+            .typography-images img:not(.hovered) {
+                transform: scale(1);
+                z-index: 1;
+            }
 
-    <a href="https://github.com/chipcord/chipcord.github.io/raw/main/circuit/Circuit%20Font.zip" class="download-button">Download</a>
+            /* Media query for small screens */
+            @media (max-width: 600px) {
+                body {
+                    padding-top: 60px;
+                }
 
-    <div class="section">
-        <h2>About</h2>
-        <p>Circuit is a display-typeface designed by <a href="https://chipcord.github.io">chip</a> in 2025. The goal with this typeface 
-        was to create a font with as few shapes and complications as possible. Most of the characters consist of just squares with
-        two rounded corners and two non-rounded. There are no major holes or dents, just simple cuts into the square. This makes for
-        a font that fits perfectly in a grid-based system.</p>
-    </div>
+                .text-container {
+                    font-size: clamp(
+                        18vw,
+                        20vw,
+                        26vw
+                    ); /* Scales dynamically within a range */
+                }
 
-    <div class="section">
-        <h2>License</h2>
-        <p>Circuit © 2025 by Chip is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International</a>.</p>
-    </div>
+                .typography-images {
+                    flex-direction: column;
+                    gap: 10px;
+                    align-items: center;
+                }
 
-    <div class="section">
-        <h2>Characters</h2>
-        <p>41</p>
-    </div>
+                .typography-images img {
+                    width: 80vw;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://chipcord.github.io" class="back-link">Back</a>
 
-    <div class="section">
-        <h2>Typography</h2>
-        <div class="typography-images">
-            <img src="typography1.svg" alt="Typography Example 1" id="img1">
-            <img src="typography2.svg" alt="Typography Example 2" id="img2">
-            <img src="typography3.svg" alt="Typography Example 3" id="img3">
+        <div class="text-container">
+            When zombies arrive quickly fax Judge Pat.
         </div>
-    </div>
 
-    <script>
-        // JavaScript to handle image hover behavior
-        const images = document.querySelectorAll('.typography-images img');
+        <a
+            href="https://github.com/chipcord/chipcord.github.io/raw/main/circuit/Circuit%20Font.zip"
+            class="download-button"
+            >Download</a
+        >
 
-        images.forEach(image => {
-            image.addEventListener('mouseenter', () => {
-                images.forEach(img => img.classList.remove('hovered'));
-                image.classList.add('hovered');
+        <div class="section">
+            <h2>About</h2>
+            <p>
+                Circuit is a display-typeface designed by
+                <a href="https://chipcord.github.io">chip</a> in 2025. The goal
+                with this typeface was to create a font with as few shapes and
+                complications as possible. Most of the characters consist of
+                just squares with two rounded corners and two non-rounded. There
+                are no major holes or dents, just simple cuts into the square.
+                This makes for a font that fits perfectly in a grid-based
+                system.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>License</h2>
+            <p>
+                Circuit © 2025 by Chip is licensed under
+                <a
+                    href="https://creativecommons.org/licenses/by-nd/4.0/"
+                    target="_blank"
+                    >Creative Commons Attribution-NoDerivatives 4.0
+                    International</a
+                >.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Characters</h2>
+            <p>41</p>
+        </div>
+
+        <div class="section">
+            <h2>Typography</h2>
+            <div class="typography-images">
+                <img
+                    src="typography1.svg"
+                    alt="Typography Example 1"
+                    id="img1"
+                />
+                <img
+                    src="typography2.svg"
+                    alt="Typography Example 2"
+                    id="img2"
+                />
+                <img
+                    src="typography3.svg"
+                    alt="Typography Example 3"
+                    id="img3"
+                />
+            </div>
+        </div>
+
+        <script>
+            // JavaScript to handle image hover behavior
+            const images = document.querySelectorAll(".typography-images img");
+
+            images.forEach((image) => {
+                image.addEventListener("mouseenter", () => {
+                    images.forEach((img) => img.classList.remove("hovered"));
+                    image.classList.add("hovered");
+                });
+
+                image.addEventListener("mouseleave", () => {
+                    image.classList.remove("hovered");
+                });
             });
-
-            image.addEventListener('mouseleave', () => {
-                image.classList.remove('hovered');
-            });
-        });
-    </script>
-
-</body>
+        </script>
+    </body>
 </html>
