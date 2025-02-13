@@ -118,6 +118,9 @@
             display: none;
             pointer-events: none; /* Makes the image not interactable */
             z-index: 1000;
+            max-width: 200px; /* Maximum width limit */
+            min-width: 50px; /* Minimum width limit */
+            width: auto; /* Let the image scale with the limits */
         }
 
     </style>
@@ -174,6 +177,14 @@
                 image.onload = function() {
                     hoverImage.src = imagePath; // Set the source of the hover image
                     hoverImage.style.display = 'block'; // Show the image
+
+                    // Apply the image width limits
+                    hoverImage.style.width = 'auto'; // reset width to auto
+                    if (image.width > 200) { // Maximum width
+                        hoverImage.style.width = '200px';
+                    } else if (image.width < 50) { // Minimum width
+                        hoverImage.style.width = '50px';
+                    }
                 };
                 image.onerror = function() {
                     hoverImage.style.display = 'none'; // Hide the image if not found
