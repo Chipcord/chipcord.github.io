@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chip's Wishlist</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Added Inter font -->
+
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.png" type="image/png" />
+        <!-- Replace this with the path to your logo -->
+
+        <style>
+            body {
+                background-color: #1e1e1e; /* Background */
+                color: #7a7a7a; /* Text */
+                font-family: "Inter", Arial, sans-serif; /* Changed font to Inter */
+                margin: 0;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+            }
+            .back-link {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-family: "Inter", sans-serif;
+                font-size: 30px;
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            .back-link:hover {
+                color: #d72828;
+                text-decoration: underline;
+            }
+            .container {
+                max-width: 80%; /* Smaller container width */
+                width: 100%;
+                padding-left: 5%;
+                box-sizing: border-box;
+            }
+
+            a {
+                color: #d4d4d4; /* Links */
+                text-decoration: none; /* Removes underline from links */
+            }
+
+            a:hover {
+                color: #d72828; /* Hover effect */
+            }
+
+            h1 {
+                font-size: 4vw; /* Scaled size for larger screens */
+                color: #d4d4d4; /* Set to the same color as links */
+                margin-bottom: 8px;
+            }
+
+            p {
+                font-size: 2.5vw; /* Scaled size for larger screens */
+                color: #d4d4d4; /* Set to the same color as links */
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 3vw; /* Scaled size for larger screens */
+                color: #7a7a7a; /* Color for smaller headings */
+                margin-bottom: 10px;
+            }
+
+            .section {
+                margin-bottom: 15px;
+            }
+
+            .section a {
+                display: block;
+                margin-bottom: 6px;
+                font-size: 2vw; /* Scaled size for larger screens */
+            }
+
+            /* Media Queries for Larger Screens (like Mac) */
+            @media (min-width: 1024px) {
+                h1 {
+                    font-size: 32px; /* Fixed size for h1 on larger screens */
+                }
+
+                p {
+                    font-size: 18px; /* Fixed size for paragraph on larger screens */
+                }
+
+                h2 {
+                    font-size: 24px; /* Fixed size for section headers on larger screens */
+                }
+
+                .section a {
+                    font-size: 16px; /* Fixed size for links on larger screens */
+                }
+
+                .container {
+                    max-width: 60%; /* Smaller container for larger screens */
+                    padding-top: 50px; /* Adds extra space at the top on larger screens */
+                }
+            }
+
+            /* Media Queries for Smaller Screens (like mobile) */
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 6vw; /* Larger font size for h1 on smaller screens */
+                }
+
+                p {
+                    font-size: 4vw; /* Larger font size for paragraph on smaller screens */
+                }
+
+                h2 {
+                    font-size: 5vw; /* Larger font size for section headers on smaller screens */
+                }
+
+                .section a {
+                    font-size: 4vw; /* Larger font size for links on smaller screens */
+                }
+
+                .container {
+                    max-width: 90%; /* Make the container wider on small screens */
+                    padding-top: 20px; /* No extra space at the top for smaller screens */
+                }
+            }
+
+            /* Add styling for the image */
+            .hover-image {
+                position: absolute;
+                display: none;
+                pointer-events: none; /* Makes the image not interactable */
+                z-index: 1000;
+                max-width: 300px; /* 50% larger max-width */
+                min-width: 75px; /* 50% larger min-width */
+                width: auto; /* Let the image scale with the limits */
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://chipcord.github.io" class="back-link">Back</a>
+
+        <div class="container">
+            <h1>Wishlist</h1>
+            <p>
+                If you got here, you're probably wondering what I'm interested
+                in, or just lost.
+            </p>
+
+            <div class="section">
+                <h2>Books</h2>
+                <a
+                    href="https://www.phaidon.com/store/design/dieter-rams-the-complete-works-9781838661533"
+                    >Dieter Rams: The Complete Works(Klaus Klemp)</a
+                >
+                <a
+                    href="https://www.amazon.com/Dieter-Rams-Better-English-German/dp/3899555252/"
+                    >Dieter Rams. Less But Better(Dieter Rams)</a
+                >
+                <a
+                    href="https://www.amazon.com/Grid-systems-graphic-design-communication/dp/3721201450"
+                    >Grid systems in graphic design(Josef Müller-Brockmann)</a
+                >
+            </div>
+
+            <div class="section">
+                <h2>Tech</h2>
+                <a
+                    href="https://www.amazon.co.uk/CMF-Phone-128GB-Unlocked-smartphone/dp/B0D53ZYFKG?currency=NOK"
+                    >CMF Phone 1 / Nothing Phone(2a)</a
+                >
+                <a
+                    href="https://evenstadmusikk.no/r%C3%B8de/1142408/r%C3%B8de-nt-usb-mini-studio-quality-usb-mic"
+                    >Røde NT-USB Mini</a
+                >
+                <a
+                    href="https://evenstadmusikk.no/gravity-stands/1201446/gravity-ms-tba-01-microphone-arm"
+                    >Gravity MS TBA 01</a
+                >
+            </div>
+
+            <div class="section">
+                <h2>Utility</h2>
+                <a
+                    href="https://www.tomtoc.com/products/accordion-a01-accessory-pouch?_pos=4&_psq=pouch&_ss=e&_v=1.0"
+                    >Accessory Pouch</a
+                >
+                <a href="https://www.hultafors.no/products/talmeter"
+                    >Tapemeasure</a
+                >
+            </div>
+
+            <div class="section">
+                <h2>Furniture</h2>
+                <a
+                    href="https://www.ikea.com/no/en/p/olseroed-side-table-anthracite-dark-grey-40530917/#content"
+                    >Olserod side table</a
+                >
+            </div>
+
+            <div class="section">
+                <h2>Software</h2>
+                <a href="https://glyphsapp.com/buy">Glyphs 3/Glyphs 2 mini</a>
+            </div>
+        </div>
+
+        <!-- Image that will be displayed on hover -->
+        <img id="hover-image" class="hover-image" src="" alt="hover image" />
+
+        <script>
+            // Get the image element
+            const hoverImage = document.getElementById("hover-image");
+
+            // Function to show the image on hover
+            document.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("mouseenter", function (event) {
+                    const linkName = this.textContent
+                        .trim()
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")
+                        .replace(/[^a-z0-9\-]/g, ""); // Remove special characters
+                    const imagePath = `${linkName}.png`; // Set the image path (same name as link)
+
+                    // Check if the image exists
+                    const image = new Image();
+                    image.onload = function () {
+                        hoverImage.src = imagePath; // Set the source of the hover image
+                        hoverImage.style.display = "block"; // Show the image
+
+                        // Apply the image width limits
+                        hoverImage.style.width = "auto"; // reset width to auto
+                        if (image.width > 300) {
+                            // Maximum width
+                            hoverImage.style.width = "300px";
+                        } else if (image.width < 75) {
+                            // Minimum width
+                            hoverImage.style.width = "75px";
+                        }
+                    };
+                    image.onerror = function () {
+                        hoverImage.style.display = "none"; // Hide the image if not found
+                    };
+                    image.src = imagePath;
+
+                    // Position the image near the cursor (slightly above and to the right)
+                    document.addEventListener("mousemove", moveImage);
+                });
+
+                // Hide the image when the mouse leaves the link
+                link.addEventListener("mouseleave", function () {
+                    hoverImage.style.display = "none";
+                    document.removeEventListener("mousemove", moveImage);
+                });
+            });
+
+            // Function to move the image with the cursor (slightly above and to the right)
+            function moveImage(event) {
+                hoverImage.style.left = event.pageX + 15 + "px"; // Position image slightly to the right of the cursor
+                hoverImage.style.top = event.pageY - 200 + "px"; // Position image slightly above the cursor (more than 40px)
+            }
+        </script>
+    </body>
+</html>
