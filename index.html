@@ -8,17 +8,13 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
             rel="stylesheet"
         />
-        <!-- Added Inter font -->
-
-        <!-- Favicon -->
         <link rel="icon" href="favicon.png" type="image/png" />
-        <!-- Replace this with the path to your logo -->
 
         <style>
             body {
-                background-color: #1e1e1e; /* Background */
-                color: #7a7a7a; /* Text */
-                font-family: "Inter", Arial, sans-serif; /* Changed font to Inter */
+                background-color: #1e1e1e;
+                color: #7a7a7a;
+                font-family: "Inter", Arial, sans-serif;
                 margin: 0;
                 padding: 20px;
                 display: flex;
@@ -26,36 +22,36 @@
             }
 
             .container {
-                max-width: 80%; /* Smaller container width */
+                max-width: 80%;
                 width: 100%;
                 padding-left: 5%;
                 box-sizing: border-box;
             }
 
             a {
-                color: #d4d4d4; /* Links */
-                text-decoration: none; /* Removes underline from links */
+                color: #d4d4d4;
+                text-decoration: none;
             }
 
             a:hover {
-                color: #d72828; /* Hover effect */
+                color: #d72828;
             }
 
             h1 {
-                font-size: 4vw; /* Scaled size for larger screens */
-                color: #d4d4d4; /* Set to the same color as links */
+                font-size: 4vw;
+                color: #d4d4d4;
                 margin-bottom: 8px;
             }
 
             p {
-                font-size: 2.5vw; /* Scaled size for larger screens */
-                color: #d4d4d4; /* Set to the same color as links */
+                font-size: 2.5vw;
+                color: #d4d4d4;
                 margin-bottom: 15px;
             }
 
             h2 {
-                font-size: 3vw; /* Scaled size for larger screens */
-                color: #7a7a7a; /* Color for smaller headings */
+                font-size: 3vw;
+                color: #7a7a7a;
                 margin-bottom: 10px;
             }
 
@@ -66,66 +62,64 @@
             .section a {
                 display: block;
                 margin-bottom: 6px;
-                font-size: 2vw; /* Scaled size for larger screens */
+                font-size: 2vw;
             }
 
-            /* Media Queries for Larger Screens (like Mac) */
             @media (min-width: 1024px) {
                 h1 {
-                    font-size: 32px; /* Fixed size for h1 on larger screens */
+                    font-size: 32px;
                 }
 
                 p {
-                    font-size: 18px; /* Fixed size for paragraph on larger screens */
+                    font-size: 18px;
                 }
 
                 h2 {
-                    font-size: 24px; /* Fixed size for section headers on larger screens */
+                    font-size: 24px;
                 }
 
                 .section a {
-                    font-size: 16px; /* Fixed size for links on larger screens */
+                    font-size: 16px;
                 }
 
                 .container {
-                    max-width: 60%; /* Smaller container for larger screens */
-                    padding-top: 50px; /* Adds extra space at the top on larger screens */
+                    max-width: 60%;
+                    padding-top: 50px;
                 }
             }
 
-            /* Media Queries for Smaller Screens (like mobile) */
             @media (max-width: 600px) {
                 h1 {
-                    font-size: 6vw; /* Larger font size for h1 on smaller screens */
+                    font-size: 6vw;
                 }
 
                 p {
-                    font-size: 4vw; /* Larger font size for paragraph on smaller screens */
+                    font-size: 4vw;
                 }
 
                 h2 {
-                    font-size: 5vw; /* Larger font size for section headers on smaller screens */
+                    font-size: 5vw;
                 }
 
                 .section a {
-                    font-size: 4vw; /* Larger font size for links on smaller screens */
+                    font-size: 4vw;
                 }
 
                 .container {
-                    max-width: 90%; /* Make the container wider on small screens */
-                    padding-top: 20px; /* No extra space at the top for smaller screens */
+                    max-width: 90%;
+                    padding-top: 20px;
                 }
             }
 
-            /* Add styling for the image */
             .hover-image {
                 position: absolute;
-                display: none;
-                pointer-events: none; /* Makes the image not interactable */
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
                 z-index: 1000;
-                max-width: 300px; /* 50% larger max-width */
-                min-width: 75px; /* 50% larger min-width */
-                width: auto; /* Let the image scale with the limits */
+                max-width: 300px;
+                min-width: 75px;
+                width: auto;
             }
         </style>
     </head>
@@ -181,59 +175,60 @@
             </div>
         </div>
 
-        <!-- Image that will be displayed on hover -->
         <img id="hover-image" class="hover-image" src="" alt="hover image" />
 
         <script>
-            // Get the image element
             const hoverImage = document.getElementById("hover-image");
+            let isFadingOut = false; // Flag to track if the image is fading out
 
-            // Function to show the image on hover
             document.querySelectorAll("a").forEach((link) => {
-                link.addEventListener("mouseenter", function (event) {
+                link.addEventListener("mouseenter", function () {
                     const linkName = this.textContent
                         .trim()
                         .toLowerCase()
                         .replace(/\s+/g, "-")
-                        .replace(/[^a-z0-9\-]/g, ""); // Remove special characters
-                    const imagePath = `${linkName}.png`; // Set the image path (same name as link)
+                        .replace(/[^a-z0-9\-]/g, "");
+                    const imagePath = `${linkName}.png`;
 
-                    // Check if the image exists
                     const image = new Image();
                     image.onload = function () {
-                        hoverImage.src = imagePath; // Set the source of the hover image
-                        hoverImage.style.display = "block"; // Show the image
+                        // If the image is fading out, wait for it to finish
+                        if (isFadingOut) {
+                            setTimeout(() => {
+                                hoverImage.src = imagePath;
+                                hoverImage.style.opacity = 1; // Fade in the new image
+                            }, 100); // Match this duration with the CSS transition duration
+                        } else {
+                            hoverImage.src = imagePath;
+                            hoverImage.style.opacity = 1; // Fade in the new image
+                        }
 
                         // Apply the image width limits
-                        hoverImage.style.width = "auto"; // reset width to auto
+                        hoverImage.style.width = "auto";
                         if (image.width > 300) {
-                            // Maximum width
                             hoverImage.style.width = "300px";
                         } else if (image.width < 75) {
-                            // Minimum width
                             hoverImage.style.width = "75px";
                         }
                     };
                     image.onerror = function () {
-                        hoverImage.style.display = "none"; // Hide the image if not found
+                        hoverImage.style.opacity = 0; // Hide the image if not found
                     };
                     image.src = imagePath;
 
-                    // Position the image near the cursor (slightly above and to the right)
                     document.addEventListener("mousemove", moveImage);
                 });
 
-                // Hide the image when the mouse leaves the link
                 link.addEventListener("mouseleave", function () {
-                    hoverImage.style.display = "none";
+                    isFadingOut = true; // Set the flag to indicate fading out
+                    hoverImage.style.opacity = 0; // Fade out the image
                     document.removeEventListener("mousemove", moveImage);
                 });
             });
 
-            // Function to move the image with the cursor (slightly above and to the right)
             function moveImage(event) {
-                hoverImage.style.left = event.pageX + 15 + "px"; // Position image slightly to the right of the cursor
-                hoverImage.style.top = event.pageY - 200 + "px"; // Position image slightly above the cursor (more than 40px)
+                hoverImage.style.left = event.pageX + 15 + "px";
+                hoverImage.style.top = event.pageY - 200 + "px";
             }
         </script>
     </body>
