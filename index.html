@@ -133,6 +133,11 @@
 
             <div class="section">
                 <h2>Links</h2>
+                <a
+                    href="#"
+                    onclick="copyToClipboard('chipcord@duck.com'); return false;"
+                    >chipcord@duck.com</a
+                >
                 <a href="https://chipcord.itch.io">itch.io</a>
                 <a href="https://dribbble.com/ChipCord">dribbble</a>
                 <a href="https://www.youtube.com/@Chipcord">youtube</a>
@@ -180,6 +185,17 @@
         <script>
             const hoverImage = document.getElementById("hover-image");
             let isFadingOut = false; // Flag to track if the image is fading out
+
+            function copyToClipboard(text) {
+                navigator.clipboard
+                    .writeText(text)
+                    .then(() => {
+                        alert("Email copied to clipboard!");
+                    })
+                    .catch((err) => {
+                        console.error("Error copying text: ", err);
+                    });
+            }
 
             document.querySelectorAll("a").forEach((link) => {
                 link.addEventListener("mouseenter", function () {
