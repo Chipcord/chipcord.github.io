@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shop</title>
+
+        <!-- Poppins -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Noto Sans Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            body {
+                font-family: "Poppins", sans-serif;
+                margin: 0;
+                background-color: #ffffff;
+                color: #000000;
+            }
+
+            /* Top bar (Header) */
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 4vw;
+                height: 80px;
+                border-bottom: 1px solid #ddd;
+                position: sticky;
+                top: 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(10px);
+                z-index: 1000;
+            }
+
+            /* Logo and Navigation */
+            .logo a {
+                text-decoration: none;
+                color: #000;
+                position: relative;
+            }
+
+            .logo a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1.5px;
+                background-color: #000;
+                opacity: 0;
+            }
+
+            .logo a:hover::after {
+                opacity: 1;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+
+            .logo-arrow {
+                font-family: "Noto Sans Symbols", sans-serif;
+                margin-right: 0.4rem;
+                padding-bottom: 0.2rem;
+                font-size: 1.5rem;
+            }
+            .arrow {
+                font-family: "Noto Sans Symbols", sans-serif;
+            }
+
+            nav a {
+                margin-left: 2rem;
+                text-decoration: none;
+                color: #000;
+                font-weight: 400;
+            }
+
+            /* Main content layout */
+            main {
+                padding: 4rem 4vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Content box */
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                line-height: 1.6;
+            }
+
+            /* Text styling */
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin-top: 0.1rem;
+                margin-bottom: 1rem;
+            }
+
+            .small-header {
+                font-size: 1rem;
+                margin-top: 1rem;
+                margin-bottom: -1rem;
+                font-weight: 500;
+            }
+
+            /* Technologies section */
+            .technologies {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .technologies a {
+                position: relative;
+                text-decoration: none;
+                color: #000;
+                display: block;
+                padding-bottom: 2px;
+            }
+
+            .technologies a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #000;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .technologies a:hover::after {
+                opacity: 1;
+            }
+
+            .typography-images {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            .typography-images img {
+                border-radius: 8px;
+                width: 25vw;
+                height: auto;
+                transition:
+                    transform 0.2s ease,
+                    z-index 0.2s ease;
+                position: relative;
+                z-index: 1;
+            }
+
+            .typography-images img.hovered {
+                transform: scale(1.05);
+                z-index: 10;
+            }
+
+            .typography-images img:not(.hovered) {
+                transform: scale(1);
+                z-index: 1;
+            }
+
+            @font-face {
+                font-family: "Quixly";
+                src: url("/shop/fonts/quixly/Quixly-Capsonly.woff2")
+                    format("woff2");
+                font-weight: normal; /* Optional: define the weight if needed */
+                font-style: normal; /* Optional: define the style if needed */
+            }
+
+            .font-display {
+                font-family: "Quixly", sans-serif;
+                font-size: 12rem;
+                line-height: 0.8;
+                margin-top: 1rem;
+            }
+            .buy-btn {
+                font-family: "Poppins", sans-serif;
+                text-decoration: none;
+                color: #000;
+                font-weight: 400;
+                border: 1px solid #000;
+                padding: 1rem;
+                width: 100%;
+                max-width: 1350px;
+                text-align: center; /* Align text to the left */
+                text-indent: 20px; /* Negative indent moves text to the right */
+                transition:
+                    background-color 0.3s ease,
+                    color 0.3s ease;
+                box-sizing: border-box;
+                border-radius: 8px; /* Slightly round the corners */
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+            .buy-btn:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../"><span class="logo-arrow">⭠</span> Relay</a>
+            </div>
+            <nav>
+                <a href="/shop/fonts/relay/Relay-Display.woff2">Shop</a>
+                <a href="/work/">Work</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="content">
+                <p class="font-display">
+                    When zombies arrive quickly fax Judge Pat.
+                </p>
+                <a class="buy-btn" href="https://chipcord.gumroad.com/l/circuit"
+                    >Buy <span class="arrow">→</span></a
+                >
+                <p class="small-header">About</p>
+
+                <p>N/A</p>
+                <p class="small-header">License</p>
+
+                <p>N/A</p>
+                <p class="small-header">Characters</p>
+
+                <p>N/A</p>
+
+                <p class="small-header">Typography</p>
+
+                <div class="typography-images">
+                    <img
+                        src="typography1.svg"
+                        alt="Typography Example 1"
+                        id="img1"
+                    />
+                    <img
+                        src="typography2.svg"
+                        alt="Typography Example 2"
+                        id="img2"
+                    />
+                    <img
+                        src="typography3.svg"
+                        alt="Typography Example 3"
+                        id="img3"
+                    />
+                </div>
+            </div>
+        </main>
+        <script>
+            // JavaScript to handle image hover behavior
+            const images = document.querySelectorAll(".typography-images img");
+
+            images.forEach((image) => {
+                image.addEventListener("mouseenter", () => {
+                    images.forEach((img) => img.classList.remove("hovered"));
+                    image.classList.add("hovered");
+                });
+
+                image.addEventListener("mouseleave", () => {
+                    image.classList.remove("hovered");
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shop</title>
+
+        <!-- Poppins -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Noto Sans Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            body {
+                font-family: "Poppins", sans-serif;
+                margin: 0;
+                background-color: #ffffff;
+                color: #000000;
+            }
+
+            /* Top bar (Header) */
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 4vw;
+                height: 80px;
+                border-bottom: 1px solid #ddd;
+                position: sticky;
+                top: 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(10px);
+                z-index: 1000;
+            }
+
+            /* Logo and Navigation */
+            .logo a {
+                text-decoration: none;
+                color: #000;
+                position: relative;
+            }
+
+            .logo a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1.5px;
+                background-color: #000;
+                opacity: 0;
+            }
+
+            .logo a:hover::after {
+                opacity: 1;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+
+            .logo-arrow {
+                font-family: "Noto Sans Symbols", sans-serif;
+                margin-right: 0.4rem;
+                padding-bottom: 0.2rem;
+                font-size: 1.5rem;
+            }
+            .arrow {
+                font-family: "Noto Sans Symbols", sans-serif;
+            }
+
+            nav a {
+                margin-left: 2rem;
+                text-decoration: none;
+                color: #000;
+                font-weight: 400;
+            }
+
+            /* Main content layout */
+            main {
+                padding: 4rem 4vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Content box */
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                line-height: 1.6;
+            }
+
+            /* Text styling */
+            h1 {
+                font-size: 2.5vw;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                padding: 0 4vw;
+                box-sizing: border-box;
+                max-width: 70%;
+                font-size: 1.2vw;
+                margin-top: 0.1rem;
+                margin-bottom: 1rem;
+            }
+
+            .small-header {
+                font-size: 1vw;
+                margin-top: 1rem;
+                margin-bottom: -1rem;
+                font-weight: 500;
+            }
+
+            /* Technologies section */
+            .technologies {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .technologies a {
+                position: relative;
+                text-decoration: none;
+                color: #000;
+                display: block;
+                padding-bottom: 2px;
+            }
+
+            .technologies a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #000;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .technologies a:hover::after {
+                opacity: 1;
+            }
+
+            .typography-images {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            .typography-images img {
+                border-radius: 8px;
+                width: 25vw;
+                height: auto;
+                transition:
+                    transform 0.2s ease,
+                    z-index 0.2s ease;
+                position: relative;
+                z-index: 1;
+            }
+
+            .typography-images img.hovered {
+                transform: scale(1.05);
+                z-index: 10;
+            }
+
+            .typography-images img:not(.hovered) {
+                transform: scale(1);
+                z-index: 1;
+            }
+
+            @font-face {
+                font-family: "Circuit-Display";
+                src: url("/shop/fonts/circuit/Circuit-Display.woff2")
+                    format("woff2");
+                font-weight: normal; /* Optional: define the weight if needed */
+                font-style: normal; /* Optional: define the style if needed */
+            }
+
+            .font-display {
+                font-family: "Circuit-Display", sans-serif;
+                font-size: 10vw;
+                line-height: 0.71;
+                margin-top: 1rem;
+                margin-right: 0; /* remove the right margin */
+                margin-left: 0; /* make sure no left margin pushes it */
+                padding: 0 2vw; /* add some horizontal breathing room */
+                overflow-wrap: break-word;
+                word-break: break-word;
+                max-width: 60%;
+                box-sizing: border-box;
+            }
+            .buy-btn {
+                font-family: "Poppins", sans-serif;
+                text-decoration: none;
+                color: #000;
+                font-weight: 400;
+                border: 1px solid #000;
+                padding: 1rem;
+                width: 100%;
+                max-width: 50rem;
+                text-align: center; /* Align text to the left */
+                text-indent: 20px; /* Negative indent moves text to the right */
+                transition:
+                    background-color 0.3s ease,
+                    color 0.3s ease;
+                box-sizing: border-box;
+                border-radius: 8px; /* Slightly round the corners */
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+            .buy-btn:hover {
+                background-color: #000;
+                color: #fff;
+            }
+
+            /* Font character grid styling */
+            .character-grid {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                justify-content: center;
+                gap: 3rem;
+                padding: 4rem 4vw;
+            }
+
+            .character-grid-item {
+                font-size: 15vw; /* Increased font size */
+                font-family: "Circuit-Display", sans-serif;
+                line-height: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../"><span class="logo-arrow">⭠</span> Circuit</a>
+            </div>
+            <nav>
+                <a href="/shop/">Shop</a>
+                <a href="/work/">Work</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="content">
+                <p class="font-display">
+                    When zombies arrive quickly fax Judge Pat.
+                </p>
+                <a class="buy-btn" href="https://chipcord.gumroad.com/l/circuit"
+                    >Download <span class="arrow">→</span></a
+                >
+                <p class="small-header">About</p>
+
+                <p>
+                    Circuit is a display-typeface designed by chip in 2025. The
+                    goal with this typeface was to create a font with as few
+                    shapes and complications as possible. Most of the characters
+                    consist of just squares with two rounded corners and two
+                    non-rounded. There are no major holes or dents, just simple
+                    cuts into the square. This makes for a font that fits
+                    perfectly in a grid-based system.
+                </p>
+                <p class="small-header">License</p>
+
+                <p>
+                    Circuit © 2025 by Chip is licensed under Creative Commons
+                    Attribution-NoDerivatives 4.0 International.
+                </p>
+
+                <p class="small-header">Typography</p>
+
+                <div class="typography-images">
+                    <img
+                        src="typography1.svg"
+                        alt="Typography Example 1"
+                        id="img1"
+                    />
+                    <img
+                        src="typography2.svg"
+                        alt="Typography Example 2"
+                        id="img2"
+                    />
+                    <img
+                        src="typography3.svg"
+                        alt="Typography Example 3"
+                        id="img3"
+                    />
+                </div>
+
+                <p class="small-header">Characters</p>
+
+                <p>41</p>
+
+                <!-- Grid with font characters -->
+                <div class="character-grid">
+                    <div class="character-grid-item">A</div>
+                    <div class="character-grid-item">B</div>
+                    <div class="character-grid-item">C</div>
+                    <div class="character-grid-item">D</div>
+                    <div class="character-grid-item">E</div>
+                    <div class="character-grid-item">F</div>
+                    <div class="character-grid-item">G</div>
+                    <div class="character-grid-item">H</div>
+                    <div class="character-grid-item">I</div>
+                    <div class="character-grid-item">J</div>
+                    <div class="character-grid-item">K</div>
+                    <div class="character-grid-item">L</div>
+                    <div class="character-grid-item">M</div>
+                    <div class="character-grid-item">N</div>
+                    <div class="character-grid-item">O</div>
+                    <div class="character-grid-item">P</div>
+                    <div class="character-grid-item">Q</div>
+                    <div class="character-grid-item">R</div>
+                    <div class="character-grid-item">S</div>
+                    <div class="character-grid-item">T</div>
+                    <div class="character-grid-item">U</div>
+                    <div class="character-grid-item">V</div>
+                    <div class="character-grid-item">W</div>
+                    <div class="character-grid-item">X</div>
+                    <div class="character-grid-item">Y</div>
+                    <div class="character-grid-item">Z</div>
+                    <div class="character-grid-item">0</div>
+                    <div class="character-grid-item">1</div>
+                    <div class="character-grid-item">2</div>
+                    <div class="character-grid-item">3</div>
+                    <div class="character-grid-item">4</div>
+                    <div class="character-grid-item">5</div>
+                    <div class="character-grid-item">6</div>
+                    <div class="character-grid-item">7</div>
+                    <div class="character-grid-item">8</div>
+                    <div class="character-grid-item">9</div>
+                    <div class="character-grid-item">.</div>
+                    <div class="character-grid-item">,</div>
+                    <div class="character-grid-item">!</div>
+                    <div class="character-grid-item">?</div>
+                    <div class="character-grid-item">-</div>
+                </div>
+            </div>
+        </main>
+        <script>
+            // JavaScript to handle image hover behavior
+            const images = document.querySelectorAll(".typography-images img");
+
+            images.forEach((image) => {
+                image.addEventListener("mouseenter", () => {
+                    image.classList.add("hovered");
+                });
+
+                image.addEventListener("mouseleave", () => {
+                    image.classList.remove("hovered");
+                });
+            });
+        </script>
+    </body>
+</html>

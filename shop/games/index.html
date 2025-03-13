@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fonts</title>
+
+        <!-- Poppins -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Noto Sans Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            body {
+                font-family: "Poppins", sans-serif;
+                margin: 0;
+                background-color: #ffffff;
+                color: #000000;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 4vw; /* You can adjust the padding here to suit your needs */
+                height: 80px; /* Set a fixed height for the header */
+                border-bottom: 1px solid #ddd;
+                position: sticky;
+                top: 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(10px);
+                z-index: 1000;
+            }
+            .logo a {
+                text-decoration: none;
+                color: #000; /* Ensure the link text is black by default */
+                position: relative; /* Make sure the pseudo-element is positioned relative to the link */
+            }
+
+            .logo a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1.5px;
+                background-color: #000;
+                opacity: 0; /* Start with the underline hidden */
+                transition: opacity 0.3s ease; /* Transition effect for fading in/out */
+            }
+
+            .logo a:hover::after {
+                opacity: 1; /* Fade the underline in on hover */
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+            .logo-arrow {
+                font-family: "Noto Sans Symbols", sans-serif;
+                margin-right: 0.4rem;
+                padding-bottom: 0.2rem;
+                font-size: 1.5rem;
+            }
+            .arrow {
+                font-family: "Noto Sans Symbols", sans-serif;
+            }
+            nav a {
+                margin-left: 2rem;
+                text-decoration: none;
+                color: #000;
+                font-weight: 400;
+            }
+            .shop-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: center;
+                gap: 3rem;
+                padding: 4rem 4vw;
+            }
+            .product-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            .image-container {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 25 / 20; /* Matches 1350:1080 */
+                overflow: hidden;
+                border-radius: 8px;
+            }
+
+            .product-image,
+            .hover-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            .product-card:hover .product-image {
+                opacity: 1; /* no longer fades out */
+            }
+
+            .product-card:hover .hover-image {
+                opacity: 0; /* no longer fades in */
+            }
+            .product-title {
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-align: center;
+                margin-bottom: 0.5rem;
+                margin-top: 1.5rem;
+            }
+            .product-price {
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+            .buy-btn {
+                font-family: "Poppins", sans-serif;
+                text-decoration: none;
+                color: #000;
+                font-weight: 400;
+                border: 1px solid #000;
+                padding: 1rem;
+                width: 100%;
+                max-width: 1350px;
+                text-align: center; /* Align text to the left */
+                text-indent: 20px; /* Negative indent moves text to the right */
+                transition:
+                    background-color 0.3s ease,
+                    color 0.3s ease;
+                box-sizing: border-box;
+                border-radius: 8px; /* Slightly round the corners */
+            }
+            .buy-btn:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../"><span class="logo-arrow">⭠</span> Games</a>
+            </div>
+            <nav>
+                <a href="../../shop/">Shop</a>
+                <a href="../../work/">Work</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="shop-grid">
+                <div class="product-card">
+                    <div class="image-container">
+                        <a href="https://chipcord.itch.io/rudy-the-ravanger">
+                            <img
+                                class="product-image"
+                                src="/shop/games/rudy-the-ravanger.png"
+                                alt="Relay Font Preview"
+                            />
+                            <img
+                                class="hover-image"
+                                src="/shop/games/rudy-the-ravanger.png"
+                                alt="Relay Font Preview Hover"
+                            />
+                        </a>
+                    </div>
+                    <div class="product-title">Rudy The Ravanger</div>
+                    <div class="product-price">$0.00</div>
+                    <a
+                        class="buy-btn"
+                        href="https://chipcord.itch.io/rudy-the-ravanger"
+                        >Play <span class="arrow">→</span></a
+                    >
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <a href="https://chipcord.itch.io/flower-finder">
+                            <img
+                                class="product-image"
+                                src="/shop/games/Flowerfinder.png"
+                                alt="Circuit Font Preview"
+                            />
+                            <img
+                                class="hover-image"
+                                src="/shop/games/Flowerfinder.png"
+                                alt="Circuit Font Preview Hover"
+                            />
+                        </a>
+                    </div>
+                    <div class="product-title">Flowerfinder</div>
+                    <div class="product-price">$0.00</div>
+                    <a
+                        class="buy-btn"
+                        href="https://chipcord.itch.io/flower-finder"
+                        >Play <span class="arrow">→</span></a
+                    >
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
