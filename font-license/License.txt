@@ -1,0 +1,79 @@
+Chip Font License (CFL) v1.0
+
+Copyright (c) 2025, Chip
+(https://chipcord.github.io, chipcord@duck.com)
+Reserved Font Name: “[Font Name]”
+
+⸻
+
+LICENSE AGREEMENT
+
+This License Agreement (“Agreement”) is a legally binding contract between you (“Licensee”) and Chip (“Licensor”) governing the use of the “[Font Name]” Font Software.
+
+⸻
+
+1. Grant of License
+
+The Licensor hereby grants the Licensee a non-exclusive, non-transferable, and non-sublicensable license to use the Font Software for both personal and commercial purposes, including but not limited to:
+• Branding, logo, and trademark design
+• Advertising and marketing materials
+• Packaging and product design
+• Print and digital publications
+• Video, multimedia, and social media content
+• Websites and web applications (including @font-face embedding)
+• Mobile or desktop application embedding
+• PDF and eBook embedding
+
+⸻
+
+2. Restrictions
+
+You may not do the following without prior written permission from the Licensor:
+ • Sell, resell, or sublicense the Font Software on its own or as part of a font collection
+ • Redistribute or repackage the Font Software as a standalone product (free or paid)
+ • Modify, adapt, alter, translate, reverse engineer, decompile, disassemble, or create derivative works based on the Font Software
+ • Circumvent or violate the terms of this license in any manner
+
+⸻
+
+3. Redistribution Clause
+
+Redistribution of the Font Software (whether modified or unmodified) is not permitted, except:
+ • When embedded in a document, application, website, or other digital product as part of your project deliverables, and
+ • As long as the Font Software is not offered as a standalone downloadable file
+
+⸻
+
+4. Modifications and Derivatives
+
+The creation of Modified Versions of the Font Software is strictly prohibited. You may not create or distribute modified, adapted, or renamed versions of this font, even for personal use.
+
+⸻
+
+5. Intellectual Property & Reserved Font Name
+
+The “[Font Name]” is a Reserved Font Name and may not be used for any derivative works, forks, or modified distributions, even if permission to modify is granted in future versions of this license.
+
+⸻
+
+6. Termination
+
+This license shall terminate automatically if you fail to comply with any of its terms. Upon termination, you must cease all use of the Font Software and delete all copies.
+
+⸻
+
+7. Disclaimer of Warranty
+
+The Font Software is provided “as is”, without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+
+In no event shall the Licensor be liable for any damages arising from the use or inability to use the Font Software, including but not limited to loss of profits, data, or business interruption.
+
+⸻
+
+8. Contact
+
+For licensing inquiries, commercial redistribution requests, or custom modifications, contact:
+📧 chipcord@duck.com
+🌐 https://chipcord.github.io
+
+⸻
