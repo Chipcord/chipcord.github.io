@@ -117,7 +117,15 @@
                 margin-top: 0.1rem;
                 margin-bottom: 1rem;
             }
+            a {
+                color: #000; /* Set link color to black */
+                text-decoration: underline; /* Remove underline from links */
+            }
 
+            a:hover {
+                color: #000; /* Keep the link color black when hovered */
+                text-decoration: none; /* Optional: underline when hovered */
+            }
             .small-header {
                 font-size: 1rem;
                 margin-top: 1rem;
@@ -158,36 +166,25 @@
             }
 
             .typography-images {
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
+                display: block; /* Changed from 'flex' to 'block' */
                 margin-top: 1rem;
+                text-align: center; /* Center the images */
             }
 
             .typography-images img {
+                display: block; /* Ensure each image behaves like a block element */
+                margin: 1rem auto; /* Add some space between images and center them */
                 border-radius: 8px;
-                width: 25vw;
+                width: 60vw;
                 height: auto;
-                transition:
-                    transform 0.2s ease,
-                    z-index 0.2s ease;
+                transition: none; /* Remove the transition effect */
                 position: relative;
-                z-index: 1;
-            }
-
-            .typography-images img.hovered {
-                transform: scale(1.05);
-                z-index: 10;
-            }
-
-            .typography-images img:not(.hovered) {
-                transform: scale(1);
                 z-index: 1;
             }
 
             @font-face {
                 font-family: "Quixly";
-                src: url("/shop/fonts/quixly/Quixly-Capsonly.woff2")
+                src: url("/shop/fonts/quixly/Quixly-Regular.woff2")
                     format("woff2");
                 font-weight: normal; /* Optional: define the weight if needed */
                 font-style: normal; /* Optional: define the style if needed */
@@ -196,7 +193,7 @@
             .font-display {
                 font-family: "Quixly", sans-serif;
                 font-size: 12rem;
-                line-height: 0.8;
+                line-height: 0.83;
                 margin-top: 1rem;
             }
             .buy-btn {
@@ -222,12 +219,29 @@
                 background-color: #000;
                 color: #fff;
             }
+            /* Font character grid styling */
+            .character-grid {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                justify-content: center;
+                gap: 3rem;
+                padding: 4rem 4vw;
+            }
+
+            .character-grid-item {
+                font-size: 12vw; /* Increased font size */
+                font-family: "Quixly", sans-serif;
+                line-height: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         </style>
     </head>
     <body>
         <header>
             <div class="logo">
-                <a href="../"><span class="logo-arrow">⭠</span> Relay</a>
+                <a href="../"><span class="logo-arrow">⭠</span> Quixly</a>
             </div>
             <nav>
                 <a href="/shop/fonts/relay/Relay-Display.woff2">Shop</a>
@@ -240,21 +254,39 @@
         <main>
             <div class="content">
                 <p class="font-display">
-                    When zombies arrive quickly fax Judge Pat.
+                    WHEN ZOMBIES ARRIVE, QUICKLY FAX JUDGE PAT.
                 </p>
-                <a class="buy-btn" href="https://chipcord.gumroad.com/l/circuit"
+                <a class="buy-btn" href="https://chipcord.gumroad.com/l/quixly"
                     >Buy <span class="arrow">→</span></a
                 >
                 <p class="small-header">About</p>
 
-                <p>N/A</p>
+                <p>
+                    Gnarly is a distinctive typeface, made by using bold curves
+                    and varied thicknesses. Without serifs, it offers a clean
+                    and modern look, perfect for a small business or an
+                    interesting poster. As the first fully complete font by me,
+                    I'm really proud of it. I used my whole week of vacation + 2
+                    more weeks working on this font, so any support is highly
+                    appreciated.
+                </p>
                 <p class="small-header">License</p>
 
-                <p>N/A</p>
-                <p class="small-header">Characters</p>
-
-                <p>N/A</p>
-
+                <p>
+                    The font is licensed under the
+                    <a
+                        href="https://chipcord.github.io/font-license-v1/"
+                        target="_blank"
+                        >Chip Font License</a
+                    >. The font can be used both personally and commercially,
+                    but cannot be redistributed(with exceptions). Please see the
+                    <a
+                        href="https://chipcord.github.io/font-license-v1/"
+                        target="_blank"
+                        >full license</a
+                    >
+                    for details.
+                </p>
                 <p class="small-header">Typography</p>
 
                 <div class="typography-images">
@@ -274,22 +306,110 @@
                         id="img3"
                     />
                 </div>
+                <p id="characters" class="small-header">Characters</p>
+
+                <p>98</p>
+
+                <div class="character-grid">
+                    <div class="character-grid-item">A</div>
+                    <div class="character-grid-item">B</div>
+                    <div class="character-grid-item">C</div>
+                    <div class="character-grid-item">D</div>
+                    <div class="character-grid-item">E</div>
+                    <div class="character-grid-item">F</div>
+                    <div class="character-grid-item">G</div>
+                    <div class="character-grid-item">H</div>
+                    <div class="character-grid-item">I</div>
+                    <div class="character-grid-item">J</div>
+                    <div class="character-grid-item">K</div>
+                    <div class="character-grid-item">L</div>
+                    <div class="character-grid-item">M</div>
+                    <div class="character-grid-item">N</div>
+                    <div class="character-grid-item">O</div>
+                    <div class="character-grid-item">P</div>
+                    <div class="character-grid-item">Q</div>
+                    <div class="character-grid-item">R</div>
+                    <div class="character-grid-item">S</div>
+                    <div class="character-grid-item">T</div>
+                    <div class="character-grid-item">U</div>
+                    <div class="character-grid-item">V</div>
+                    <div class="character-grid-item">W</div>
+                    <div class="character-grid-item">X</div>
+                    <div class="character-grid-item">Y</div>
+                    <div class="character-grid-item">Z</div>
+                    <div class="character-grid-item">a</div>
+                    <div class="character-grid-item">b</div>
+                    <div class="character-grid-item">c</div>
+                    <div class="character-grid-item">d</div>
+                    <div class="character-grid-item">e</div>
+                    <div class="character-grid-item">f</div>
+                    <div class="character-grid-item">g</div>
+                    <div class="character-grid-item">h</div>
+                    <div class="character-grid-item">i</div>
+                    <div class="character-grid-item">j</div>
+                    <div class="character-grid-item">k</div>
+                    <div class="character-grid-item">l</div>
+                    <div class="character-grid-item">m</div>
+                    <div class="character-grid-item">n</div>
+                    <div class="character-grid-item">o</div>
+                    <div class="character-grid-item">p</div>
+                    <div class="character-grid-item">q</div>
+                    <div class="character-grid-item">r</div>
+                    <div class="character-grid-item">s</div>
+                    <div class="character-grid-item">t</div>
+                    <div class="character-grid-item">u</div>
+                    <div class="character-grid-item">v</div>
+                    <div class="character-grid-item">w</div>
+                    <div class="character-grid-item">x</div>
+                    <div class="character-grid-item">y</div>
+                    <div class="character-grid-item">z</div>
+                    <div class="character-grid-item">0</div>
+                    <div class="character-grid-item">1</div>
+                    <div class="character-grid-item">2</div>
+                    <div class="character-grid-item">3</div>
+                    <div class="character-grid-item">4</div>
+                    <div class="character-grid-item">5</div>
+                    <div class="character-grid-item">6</div>
+                    <div class="character-grid-item">7</div>
+                    <div class="character-grid-item">8</div>
+                    <div class="character-grid-item">9</div>
+                    <div class="character-grid-item">¢</div>
+                    <div class="character-grid-item">¤</div>
+                    <div class="character-grid-item">$</div>
+                    <div class="character-grid-item">€</div>
+                    <div class="character-grid-item">£</div>
+                    <div class="character-grid-item">¥</div>
+                    <div class="character-grid-item">^</div>
+                    <div class="character-grid-item">.</div>
+                    <div class="character-grid-item">,</div>
+                    <div class="character-grid-item">:</div>
+                    <div class="character-grid-item">;</div>
+                    <div class="character-grid-item">…</div>
+                    <div class="character-grid-item">!</div>
+                    <div class="character-grid-item">¡</div>
+                    <div class="character-grid-item">?</div>
+                    <div class="character-grid-item">¿</div>
+                    <div class="character-grid-item">·</div>
+                    <div class="character-grid-item">•</div>
+                    <div class="character-grid-item">*</div>
+                    <div class="character-grid-item">#</div>
+                    <div class="character-grid-item">/</div>
+                    <div class="character-grid-item">\</div>
+                    <div class="character-grid-item">(</div>
+                    <div class="character-grid-item">)</div>
+                    <div class="character-grid-item">{</div>
+                    <div class="character-grid-item">}</div>
+                    <div class="character-grid-item">[</div>
+                    <div class="character-grid-item">]</div>
+                    <div class="character-grid-item">-</div>
+                    <div class="character-grid-item">«</div>
+                    <div class="character-grid-item">»</div>
+                    <div class="character-grid-item">‹</div>
+                    <div class="character-grid-item">›</div>
+                    <div class="character-grid-item">"</div>
+                    <div class="character-grid-item">'</div>
+                </div>
             </div>
         </main>
-        <script>
-            // JavaScript to handle image hover behavior
-            const images = document.querySelectorAll(".typography-images img");
-
-            images.forEach((image) => {
-                image.addEventListener("mouseenter", () => {
-                    images.forEach((img) => img.classList.remove("hovered"));
-                    image.classList.add("hovered");
-                });
-
-                image.addEventListener("mouseleave", () => {
-                    image.classList.remove("hovered");
-                });
-            });
-        </script>
     </body>
 </html>
