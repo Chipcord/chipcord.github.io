@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About</title>
+
+        <!-- Poppins -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            body {
+                font-family: "Poppins", sans-serif;
+                margin: 0;
+                background-color: #ffffff;
+                color: #000000;
+            }
+
+            /* Top bar (Header) */
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 4vw;
+                height: 80px;
+                border-bottom: 1px solid #ddd;
+                position: sticky;
+                top: 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(10px);
+                z-index: 1000;
+            }
+
+            /* Logo and Navigation */
+            .logo a {
+                text-decoration: none;
+                color: #000;
+                position: relative;
+            }
+
+            .logo a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1.5px;
+                background-color: #000;
+                opacity: 0;
+            }
+
+            .logo a:hover::after {
+                opacity: 1;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+
+            nav a {
+                margin-left: 2rem;
+                text-decoration: none;
+                color: #000;
+                font-weight: 400;
+            }
+
+            /* Main content layout */
+            main {
+                padding: 4rem 4vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Content box */
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                line-height: 1.6;
+            }
+
+            /* Text styling */
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            /* Technologies section */
+            .technologies {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .technologies a {
+                position: relative;
+                text-decoration: none;
+                color: #000;
+                display: block;
+                padding-bottom: 2px;
+            }
+
+            .technologies a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #000;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .technologies a:hover::after {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="/wishlist/">Wishlist</a>
+            </div>
+            <nav>
+                <a href="/shop/">Shop</a>
+                <a href="/work/">Work</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="content">
+                <h1>Wishlist</h1>
+                <p>
+                    Hi! Beneath is some stuff that I wish for my birthday, and
+                    stuff I like or am interested in.
+                </p>
+
+                <h2>Books</h2>
+                <div class="technologies">
+                    <a
+                        href="https://www.phaidon.com/store/design/dieter-rams-the-complete-works-9781838661533"
+                        >Dieter Rams: The Complete Works(Klaus Klemp)</a
+                    >
+                    <a
+                        href="https://www.amazon.com/Dieter-Rams-Better-English-German/dp/3899555252/"
+                        >Dieter Rams. Less But Better(Dieter Rams)</a
+                    >
+                    <a
+                        href="https://www.amazon.com/Grid-systems-graphic-design-communication/dp/3721201450"
+                        >Grid systems in graphic design(Josef
+                        Müller-Brockmann)</a
+                    >
+                </div>
+                <h2>Tech</h2>
+                <div class="technologies">
+                    <a
+                        href="https://no.nothing.tech/pages/phone-3a?variant=42972358279374"
+                        >Nothing Phone(3a) black</a
+                    >
+                    <a
+                        href="https://no.nothing.tech/products/ear?variant=42544840835278"
+                        >Nothing ear buds black</a
+                    >
+                    <a
+                        href="https://evenstadmusikk.no/r%C3%B8de/1142408/r%C3%B8de-nt-usb-mini-studio-quality-usb-mic"
+                        >Røde NT-USB Mini Microphone</a
+                    >
+                    <a
+                        href="https://evenstadmusikk.no/gravity-stands/1201446/gravity-ms-tba-01-microphone-arm"
+                        >Gravity MS TBA 01 Microphone stand</a
+                    >
+                </div>
+                <h2>Utility</h2>
+                <div class="technologies">
+                    <a
+                        href="https://worklouder.cc/shop/muriicle-deskmat-collab/"
+                        >Muriicle Deskmat</a
+                    >
+                    <a
+                        href="https://www.tomtoc.com/products/accordion-a01-accessory-pouch?_pos=4&_psq=pouch&_ss=e&_v=1.0"
+                        >Accessory Pouch</a
+                    >
+                    <a href="#">Nice Tapemeasure</a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
