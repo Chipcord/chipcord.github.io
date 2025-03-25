@@ -97,31 +97,11 @@
                 transition: transform 0.3s ease;
             }
 
-            .product-card:hover .image-container {
-                transform: scale(
-                    1.05
-                ); /* You can increase the scale value if you want it to expand more */
-                z-index: 2;
-            }
             .product-image {
                 width: 100%;
                 height: auto;
                 display: block;
                 opacity: 1;
-            }
-            .hover-image {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: auto;
-                opacity: 0;
-            }
-            .product-card:hover .product-image {
-                opacity: 1;
-            }
-            .product-card:hover .hover-image {
-                opacity: 0;
             }
 
             .collection {
@@ -165,6 +145,42 @@
 
         <main>
             <div class="shop-grid">
+                <div class="collection">
+                    <div class="single-image">
+                        <h2 class="collection-header">Hand.</h2>
+                        <div class="product-card">
+                            <div class="image-container">
+                                <a
+                                    href="https://www.behance.net/gallery/222218947/Hand-Poster"
+                                >
+                                    <img
+                                        class="product-image"
+                                        src="/gallery/posters/hand/Hand.png"
+                                        alt="Circuit Font Preview"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single-image">
+                        <h2 class="collection-header">Unseen</h2>
+                        <div class="product-card">
+                            <div class="image-container">
+                                <a
+                                    href="https://www.behance.net/gallery/222218947/Hand-Poster"
+                                >
+                                    <img
+                                        class="product-image"
+                                        src="/gallery/posters/unseen/Unseen.png"
+                                        alt="Circuit Font Preview"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <h2 class="collection-header">L'Artefact</h2>
                 <div class="collection">
                     <div class="product-card">
