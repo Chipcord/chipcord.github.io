@@ -104,6 +104,13 @@
                 opacity: 1;
             }
 
+            .collection_2 {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr); /* Two items per row */
+                gap: 1rem;
+                margin-bottom: 0rem;
+            }
+
             .collection {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr); /* Two items per row */
@@ -145,7 +152,26 @@
 
         <main>
             <div class="shop-grid">
-                <div class="collection">
+                <div class="collection_2">
+                    <div class="single-image">
+                        <h2 class="collection-header">Skyline</h2>
+                        <div class="product-card">
+                            <div class="image-container">
+                                <a
+                                    href="https://www.behance.net/gallery/223035417/Skyline"
+                                >
+                                    <img
+                                        class="product-image"
+                                        src="/gallery/posters/skyline/Skyline.png"
+                                        alt="Circuit Font Preview"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection_2">
                     <div class="single-image">
                         <h2 class="collection-header">Piano.</h2>
                         <div class="product-card">
