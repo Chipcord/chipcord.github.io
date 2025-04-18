@@ -1,39 +1,53 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const navBranding = document.querySelector(".nav-branding");
-const navLinks = document.querySelectorAll(".nav-link");
+fetch("/html/header.html")
+  .then((res) => res.text())
+  .then((data) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, "text/html");
+    const header = doc.querySelector("header");
+    document.body.insertBefore(header, document.body.firstChild);
 
-hamburger.addEventListener("click", () => {
-  const isOpening = !navMenu.classList.contains("active");
+    // ✅ Now that header is in DOM, init nav
+    initNavBar();
+  });
 
-  hamburger.classList.toggle("active");
-  navBranding.classList.toggle("active");
+function initNavBar() {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  const navBranding = document.querySelector(".nav-branding");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-  if (isOpening) {
-    // Show menu immediately
-    navMenu.classList.add("active");
-
-    // Fade in links after slight delay
-    setTimeout(() => {
-      navLinks.forEach((link) => link.classList.add("active"));
-    }, 200);
-  } else {
-    // Fade out links first
-    navLinks.forEach((link) => link.classList.remove("active"));
-
-    // Then hide menu after delay
-    setTimeout(() => {
-      navMenu.classList.remove("active");
-    }, 300); // Should match nav-link transition duration
+  if (!hamburger || !navMenu || !navBranding) {
+    console.warn("Nav elements not found. Skipping navbar logic.");
+    return;
   }
-});
 
-// Optional: close menu when link clicked
-navLinks.forEach((link) =>
-  link.addEventListener("click", () => {
-    navLinks.forEach((link) => link.classList.remove("active"));
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-    navBranding.classList.remove("active");
-  }),
-);
+  hamburger.addEventListener("click", () => {
+    const isOpening = !navMenu.classList.contains("active");
+
+    hamburger.classList.toggle("active");
+    navBranding.classList.toggle("active");
+
+    if (isOpening) {
+      navMenu.classList.add("active");
+
+      setTimeout(() => {
+        navLinks.forEach((link) => link.classList.add("active"));
+      }, 200);
+    } else {
+      navLinks.forEach((link) => link.classList.remove("active"));
+
+      setTimeout(() => {
+        navMenu.classList.remove("active");
+      }, 300);
+    }
+  });
+
+  navLinks.forEach((link) =>
+    link.addEventListener("click", () => {
+      navLinks.forEach((link) => link.classList.remove("active"));
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+      navBranding.classList.remove("active");
+    }),
+  );
+}
