@@ -1,9 +1,16 @@
 /* This is the css for the website defaults */
 
+@font-face {
+    font-family: "Geist"; /* Replace with your font's name */
+    src: url(/assets/fonts/Geist/Geist[wght].woff2) format("woff2");
+    font-weight: 100 1000; /* Define the weight range of the variable font */
+    font-style: normal; /* Or 'italic' if applicable */
+}
+
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Geist", Arial, Helvetica, sans-serif;
 }
 body {
     position: relative;
@@ -14,4 +21,9 @@ a {
 }
 h1 {
     font-size: 5rem;
+    font-weight: 700;
+}
+p {
+    font-size: 1.2rem;
+    font-weight: 400;
 }
