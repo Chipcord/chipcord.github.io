@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    position: relative;
+    height: 1000vh; /* Scrollable page, remove if you actually have content */
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #171719;
+}
+li {
+    list-style: none;
+}
+a {
+    color: black;
+}
+.container {
+    width: 1600px;
+    margin: auto;
+}
+.subcontainer {
+    width: 95%;
+    margin: auto;
+}
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    z-index: 1000;
+    width: 100%;
+    min-height: 70px; /* Navbar thickness, ↓ #home section and @media section ↓ needs to also be adjusted */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-menu {
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px; /* Distance between nav-menu options */
+}
+.nav-branding {
+    text-decoration: none;
+    color: white;
+    z-index: 1000;
+    font-size: 1.5rem;
+    font-weight: 1000;
+}
+.hamburger {
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 1.5px; /* Thickness of hamburger icon, you will need to adjust the ↓ setting in the media ↓ as well */
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+#home {
+    margin-top: 100px; /* This needs to be the same or more than the navbar thickness */
+    height: 100vh; /* Optional, mostly for demonstration */
+}
+@media (max-width: 1600px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(6.75px) rotate(45deg); /* Adjust the 6.75px value manually if you change the menu button */
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-6.75px) rotate(-45deg); /* Adjust the 6.75px value manually if you change the menu button */
+    }
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 70px;
+        padding-left: 50px;
+        gap: 20px;
+        background-color: #171719;
+        text-align: center;
+        transition: top 0.3s ease-out;
+        z-index: 999;
+    }
+    .nav-item {
+        margin: 0;
+    }
+    .nav-menu.active {
+        top: 0;
+    }
+    li {
+        font-size: 1.8rem;
+    }
+    .nav-link {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .nav-link.active {
+        opacity: 1;
+    }
+    .nav-branding {
+        transition: opacity 0.3s ease-in-out;
+    }
+    .nav-branding.active {
+        opacity: 0;
+    }
+    .subcontainer {
+        width: 93%;
+    }
+}
+@media (max-width: 500px) {
+    .subcontainer {
+        width: 85%;
+    }
+}
