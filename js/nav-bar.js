@@ -45,10 +45,24 @@ function initNavBar() {
 
   navLinks.forEach((link) =>
     link.addEventListener("click", () => {
-      navLinks.forEach((link) => link.classList.remove("active"));
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-      navBranding.classList.remove("active");
+      const isOpening = !navMenu.classList.contains("active");
+
+      hamburger.classList.toggle("active");
+      navBranding.classList.toggle("active");
+
+      if (isOpening) {
+        navMenu.classList.add("active");
+
+        setTimeout(() => {
+          navLinks.forEach((link) => link.classList.add("active"));
+        }, 200);
+      } else {
+        navLinks.forEach((link) => link.classList.remove("active"));
+
+        setTimeout(() => {
+          navMenu.classList.remove("active");
+        }, 300);
+      }
     }),
   );
 }
