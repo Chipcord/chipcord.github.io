@@ -1,10 +1,10 @@
 /* This is the css for the navigation bar */
 
 header {
+    background-color: var(--nav-bar-color);
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #171719; /* Color of the nav-bar/header */
 }
 li {
     list-style: none;
@@ -17,15 +17,15 @@ li {
     width: 95%;
     margin: auto;
 }
-.nav-branding img {
+.nav-branding svg {
     width: auto;
     height: 26px;
     display: block;
-    filter: invert(1) grayscale(100%) contrast(100%);
+    fill: var(--nav-text-color);
 }
 .nav-link {
     text-decoration: none;
-    color: white;
+    color: var(--nav-text-color);
 }
 li {
     font-size: 1.2rem;
@@ -43,7 +43,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px; /* Distance between nav-menu options */
+    gap: 40px; /* Distance between nav-menu options */
 }
 .nav-branding {
     z-index: 1000;
@@ -59,11 +59,39 @@ li {
     height: 1.5px; /* Thickness of hamburger icon, you will need to adjust the ↓ setting in the media ↓ as well */
     margin: 5px 0;
     transition: all 0.3s ease;
-    background-color: white;
+    background-color: var(--nav-text-color);
 }
-#home {
-    margin-top: 100px; /* This needs to be the same or more than the navbar thickness */
-    height: 100vh; /* Optional, mostly for demonstration */
+#theme-switch {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0;
+    margin-left: -40px; /* NOT OPTIMAL */
+    padding: 0;
+    border: 0;
+    background-color: var(--nav-bar-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#theme-switch svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--nav-text-color);
+}
+#theme-switch svg path {
+    stroke: var(--nav-text-color);
+    stroke-width: 20;
+    fill: var(--nav-text-color);
+}
+#theme-switch svg:last-child {
+    display: none;
+}
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+.darkmode #theme-switch svg:last-child {
+    display: block;
 }
 @media (max-width: 1600px) {
     .container {
@@ -95,7 +123,7 @@ li {
         padding-top: 70px;
         padding-left: 50px;
         gap: 20px;
-        background-color: #171719;
+        background-color: var(--nav-bar-color);
         text-align: center;
         transition: top 0.3s ease-out;
         z-index: 999;
@@ -124,6 +152,17 @@ li {
     }
     .subcontainer {
         width: 93%;
+    }
+    #theme-switch svg path {
+        stroke: var(--nav-text-color);
+        stroke-width: 20;
+        fill: var(--nav-text-color);
+    }
+    #theme-switch {
+        width: 40px;
+        height: 40px;
+        margin-left: 0;
+        margin-top: -20px; /* NOT OPTIMAL */
     }
 }
 @media (max-width: 500px) {

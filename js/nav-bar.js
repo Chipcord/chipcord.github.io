@@ -6,8 +6,9 @@ fetch("/html/header.html")
     const header = doc.querySelector("header");
     document.body.insertBefore(header, document.body.firstChild);
 
-    // ✅ Now that header is in DOM, init nav
+    // ✅ Initialize features after header is in the DOM
     initNavBar();
+    initDarkMode();
   });
 
 function initNavBar() {
@@ -50,4 +51,30 @@ function initNavBar() {
       navBranding.classList.remove("active");
     }),
   );
+}
+
+function initDarkMode() {
+  let darkmode = localStorage.getItem("darkmode");
+  const themeSwitch = document.getElementById("theme-switch");
+
+  const enableDarkmode = () => {
+    document.body.classList.add("darkmode");
+    localStorage.setItem("darkmode", "active");
+  };
+
+  const disableDarkmode = () => {
+    document.body.classList.remove("darkmode");
+    localStorage.setItem("darkmode", null);
+  };
+
+  if (darkmode === "active") enableDarkmode();
+
+  if (themeSwitch) {
+    themeSwitch.addEventListener("click", () => {
+      darkmode = localStorage.getItem("darkmode");
+      darkmode !== "active" ? enableDarkmode() : disableDarkmode();
+    });
+  } else {
+    console.warn("Theme switch button not found.");
+  }
 }

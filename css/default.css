@@ -1,10 +1,30 @@
 /* This is the css for the website defaults */
 
-@font-face {
-    font-family: "Geist"; /* Replace with your font's name */
-    src: url(/assets/fonts/Geist/Geist[wght].woff2) format("woff2");
-    font-weight: 100 1000; /* Define the weight range of the variable font */
-    font-style: normal; /* Or 'italic' if applicable */
+:root {
+    /* Content */
+    --base-color: white;
+    --base-variant: #e8e9ed; /* These don't do anything yet */
+    --text-color: #171719;
+    --link-color: #171719;
+    /* Actions */
+    --primary-color: #3a435d; /* These don't do anything yet */
+    --accent-color: #0071ff; /* These don't do anything yet */
+    /* Nav-bar */
+    --nav-bar-color: #171719;
+    --nav-text-color: white;
+}
+.darkmode {
+    /* Content */
+    --base-color: #1f1f1f;
+    --base-variant: #090b0a; /* These don't do anything yet */
+    --text-color: white;
+    --link-color: white;
+    /* Actions */
+    --primary-color: #3a435d; /* These don't do anything yet */
+    --accent-color: #0071ff; /* These don't do anything yet */
+    /* Nav-bar */
+    --nav-bar-color: black;
+    --nav-text-color: white;
 }
 
 * {
@@ -12,18 +32,31 @@
     margin: 0;
     font-family: "Geist", Arial, Helvetica, sans-serif;
 }
+@font-face {
+    font-family: "Geist"; /* Replace with your font's name */
+    src: url(/assets/fonts/Geist/Geist[wght].woff2) format("woff2");
+    font-weight: 100 1000; /* Define the weight range of the variable font */
+    font-style: normal; /* Or 'italic' if applicable */
+}
 body {
+    background-color: var(--base-color);
     position: relative;
     height: 1000vh; /* Scrollable page, remove if you actually have content */
 }
 a {
-    color: black;
+    color: var(--link-color);
 }
 h1 {
     font-size: 5rem;
     font-weight: 700;
+    color: var(--text-color);
 }
 p {
     font-size: 1.2rem;
     font-weight: 400;
+    color: var(--text-color);
+}
+#home {
+    margin-top: 100px; /* This needs to be the same or more than the navbar thickness */
+    height: 100vh; /* Optional, mostly for demonstration */
 }
