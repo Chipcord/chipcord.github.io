@@ -17,14 +17,14 @@
     /* Content */
     --base-color: #1f1f1f;
     --base-variant: #090b0a; /* These don't do anything yet */
-    --text-color: white;
-    --link-color: white;
+    --text-color: #e8e9ed;
+    --link-color: #e8e9ed;
     /* Actions */
     --primary-color: #3a435d; /* These don't do anything yet */
     --accent-color: #0071ff; /* These don't do anything yet */
     /* Nav-bar */
     --nav-bar-color: black;
-    --nav-text-color: white;
+    --nav-text-color: #e8e9ed;
 }
 
 * {
@@ -41,7 +41,7 @@
 body {
     background-color: var(--base-color);
     position: relative;
-    height: 1000vh; /* Scrollable page, remove if you actually have content */
+    height: 100vh; /* Scrollable page, remove if you actually have content */
 }
 a {
     color: var(--link-color);
@@ -59,5 +59,17 @@ p {
 }
 #home {
     margin-top: 100px; /* This needs to be the same or more than the navbar thickness */
-    height: 100vh; /* Optional, mostly for demonstration */
+    padding-bottom: 1rem;
+}
+.about-links {
+    display: flex;
+    gap: 0.5rem;
+}
+.about-links p {
+    margin: 0;
+}
+@media (max-width: 500px) {
+    h1 {
+        font-size: 18vw;
+    }
 }

@@ -81,7 +81,17 @@ function initDarkMode() {
     localStorage.setItem("darkmode", null);
   };
 
-  if (darkmode === "active") enableDarkmode();
+  if (darkmode === "active") {
+    enableDarkmode();
+  } else if (darkmode === null) {
+    // Check system preference
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    if (prefersDark) {
+      enableDarkmode();
+    }
+  }
 
   if (themeSwitch) {
     themeSwitch.addEventListener("click", () => {

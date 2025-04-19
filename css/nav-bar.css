@@ -45,6 +45,14 @@ li {
     align-items: center;
     gap: 40px; /* Distance between nav-menu options */
 }
+
+/* Hide GAMES & FONTS when not using the mobile site */
+.nav-menu li:nth-child(4),
+.nav-menu li:nth-child(5),
+.nav-menu li:nth-child(6) {
+    display: none;
+}
+
 .nav-branding {
     z-index: 1000;
 }
@@ -163,6 +171,15 @@ li {
         height: 40px;
         margin-left: 0;
         margin-top: -20px; /* NOT OPTIMAL */
+    }
+    /* Show GAMES & FONTS when using the mobile site */
+    .nav-menu li:nth-child(4),
+    .nav-menu li:nth-child(5),
+    .nav-menu li:nth-child(6) {
+        display: list-item;
+    }
+    .nav-menu li:nth-child(3) {
+        display: none;
     }
 }
 @media (max-width: 500px) {
