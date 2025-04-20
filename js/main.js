@@ -20,6 +20,10 @@ fetch("/html/footer.html")
     document.body.appendChild(footer);
   });
 
+function preventScroll(e) {
+  e.preventDefault();
+}
+
 function initNavBar() {
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
@@ -43,9 +47,6 @@ function initNavBar() {
       document.body.addEventListener("touchmove", preventScroll, {
         passive: false,
       });
-      function preventScroll(e) {
-        e.preventDefault();
-      }
 
       setTimeout(() => {
         navLinks.forEach((link) => link.classList.add("active"));
@@ -77,6 +78,7 @@ function initNavBar() {
         navLinks.forEach((link) => link.classList.remove("active"));
 
         setTimeout(() => {
+          document.body.removeEventListener("touchmove", preventScroll);
           navMenu.classList.remove("active");
         }, 300);
       }
