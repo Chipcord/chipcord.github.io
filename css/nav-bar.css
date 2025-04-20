@@ -3,6 +3,7 @@
 header {
     background-color: var(--nav-bar-color);
     position: fixed;
+    z-index: 100;
     top: 0;
     width: 100%;
 }
@@ -31,7 +32,6 @@ li {
     font-size: 1.2rem;
 }
 .navbar {
-    z-index: 1000;
     width: 100%;
     min-height: 70px; /* Navbar thickness, ↓ #home section and @media section ↓ needs to also be adjusted */
     display: flex;
@@ -39,7 +39,6 @@ li {
     align-items: center;
 }
 .nav-menu {
-    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;

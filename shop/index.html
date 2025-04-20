@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chip's Website</title>
+        <link rel="stylesheet" href="/css/default.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
+        <link rel="stylesheet" href="/css/nav-bar.css" />
+        <link rel="stylesheet" href="/css/grid.css" />
+        <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+        <script>
+            /* Apparently an empty script tag reduces firefox FOUC bug */
+        </script>
+        <!-- Some html is injected into the code to maintain flexibility -->
+        <script src="/js/main.js" defer></script>
+        <script src="/js/fadein.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <section id="home">
+                <div class="container">
+                    <div class="subcontainer">
+                        <div class="text-container">
+                            <h1 class="fit-h1">Shop</h1>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-column">
+                                <h2>Fonts</h2>
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.gumroad.com/l/quixly"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Quixly.jpg "
+                                            alt="Quixly"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Quixly.jpg "
+                                            alt="Quixly"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.gumroad.com/l/relay"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Relay.jpg "
+                                            alt="Relay"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Relay.jpg "
+                                            alt="Relay"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.gumroad.com/l/circuit"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Circuit.jpg "
+                                            alt="Circuit"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Circuit.jpg "
+                                            alt="Circuit"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid-column">
+                                <h2>Games</h2>
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.itch.io/rudy-the-ravanger"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Rudy The Ravanger.jpg "
+                                            alt="Rudy The Ravanger"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Rudy The Ravanger.jpg "
+                                            alt="Rudy The Ravanger"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.itch.io/flower-finder"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Flowerfinder.jpg "
+                                            alt="Flowerfinder"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Flowerfinder.jpg "
+                                            alt="Flowerfinder"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Using Lenis to smooth scroll -->
+        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
+        <script>
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smooth: true,
+                direction: "vertical",
+                gestureDirection: "vertical",
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+        </script>
+        <!-- Fitty Script -->
+        <script src="https://cdn.jsdelivr.net/npm/fitty@2.3.6/dist/fitty.min.js"></script>
+        <script>
+            fitty(".fit-h1", {
+                minSize: 16,
+                maxSize: 80,
+                multiLine: false, // ensures single-line
+            });
+        </script>
+    </body>
+</html>

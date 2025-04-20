@@ -6,46 +6,77 @@
         <title>Chip's Website</title>
         <link rel="stylesheet" href="/css/nav-bar.css" />
         <link rel="stylesheet" href="/css/default.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
         <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
         <!-- The header/nav-bar (and darkmode-theme) is injected into the code to maintain flexibility -->
-        <script src="/js/nav-bar.js" defer></script>
+        <script src="/js/main.js" defer></script>
     </head>
     <body>
-        <section id="home">
-            <div class="container">
-                <div class="subcontainer">
-                    <div class="about-links">
-                        <p>
-                            <a href="https://github.com/Chipcord/">Behance</a>
-                        </p>
-                        <p><a href="https://github.com/Chipcord/">GitHub</a></p>
-                        <p><a href="https://github.com/Chipcord/">Itch</a></p>
-                    </div>
-                    <h1>I'm Chip</h1>
+        <main>
+            <section id="home">
+                <div class="container">
+                    <div class="subcontainer">
+                        <h1 class="fit-h1">About</h1>
 
-                    <p>
-                        I'm a 15 year old freelance designer and developer based
-                        in Norway, and I have been programming since I was 8.
-                        When I'm not studying, I'm probably working on something
-                        new, whether it is a font, a game or my website.
-                    </p>
-                    <p>
-                        Not yet available for hire, but I'm open for small
-                        requests, such as logos or feedback.
-                    </p>
-                    <p>
-                        I specialize in game development and 3d hard-surface
-                        modeling. Technologies I'm familiar with include: AF
-                        Designer, Blender, Godot, Glyphs, Web (HTML, CSS, and a
-                        little bit of Javascript)
-                    </p>
-                    <p>
-                        I have also dipped my toes into app development using
-                        Flutter, but I would't say I'm comfortable with it.
-                    </p>
+                        <div class="text-container">
+                            <p>
+                                I'm a 15 year old freelance designer and
+                                developer based in Norway, and I have been
+                                programming since I was 8. When I'm not
+                                studying, I'm probably working on something new,
+                                whether it is a font, a game or my website.
+                            </p>
+                            <p>
+                                I specialize in game development and 3d
+                                hard-surface modeling.
+                            </p>
+                            <h3>Technologies</h3>
+                            <div class="technologies">
+                                <p>
+                                    <a
+                                        href="https://affinity.serif.com/designer/"
+                                        >AF Designer</a
+                                    >
+                                </p>
+                                <p>
+                                    <a href="https://www.blender.org/"
+                                        >Blender</a
+                                    >
+                                </p>
+                                <p>
+                                    <a href="https://godotengine.org/">Godot</a>
+                                </p>
+                                <p>
+                                    <a href="https://glyphsapp.com/">Glyphs</a>
+                                </p>
+                                <p>Web (HTML, CSS and Javascript)</p>
+                            </div>
+
+                            <h3>Do you hire?</h3>
+                            <p>
+                                Not yet, but if you want to make something with
+                                me, or you want my thoughts on something, feel
+                                free to contact me.
+                            </p>
+                            <h3>This website</h3>
+                            <p>
+                                This wesite was built completely from the ground
+                                up, using html, css and javascript. You can see
+                                the code in my
+                                <a
+                                    href="https://github.com/Chipcord/chipcord.github.io"
+                                    >github repository.</a
+                                >
+                                The next step would be to fix some of the FOUC
+                                (flash of unstyled content) issues, but I might
+                                need to use a proper framework for that, like
+                                Next.js.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
         <!-- Using Lenis to smooth scroll -->
         <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
         <script>
@@ -67,6 +98,15 @@
             }
 
             requestAnimationFrame(raf);
+        </script>
+        <!-- Fitty Script -->
+        <script src="https://cdn.jsdelivr.net/npm/fitty@2.3.6/dist/fitty.min.js"></script>
+        <script>
+            fitty(".fit-h1", {
+                minSize: 16,
+                maxSize: 80,
+                multiLine: false, // ensures single-line
+            });
         </script>
     </body>
 </html>

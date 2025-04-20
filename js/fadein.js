@@ -1,10 +1,12 @@
-const images = document.querySelectorAll(".showcase-image.base");
+const images = document.querySelectorAll(".grid-image.base");
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, 200); // Delay in milliseconds
         observer.unobserve(entry.target);
       }
     });

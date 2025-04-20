@@ -4,28 +4,253 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Chip's Website</title>
-        <link rel="stylesheet" href="/css/nav-bar.css" />
         <link rel="stylesheet" href="/css/default.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
+        <link rel="stylesheet" href="/css/nav-bar.css" />
+        <link rel="stylesheet" href="/css/grid.css" />
         <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
-        <!-- The header/nav-bar (and darkmode-theme) is injected into the code to maintain flexibility -->
-        <script src="/js/nav-bar.js" defer></script>
+        <script>
+            /* Apparently an empty script tag reduces firefox FOUC bug */
+        </script>
+        <!-- Some html is injected into the code to maintain flexibility -->
+        <script src="/js/main.js" defer></script>
+        <script src="/js/fadein.js" defer></script>
     </head>
     <body>
-        <section id="home">
-            <div class="container">
-                <div class="subcontainer">
-                    <h1>WARNING</h1>
-                    <p>THIS WEBSITE IS STILL IN DEVELOPMENT</p>
-                    <p>
-                        I'm a 15 year old freelance designer and developer based
-                        in Norway, and I have been programming since I was 8.
-                        When I'm not studying, I'm probably working on something
-                        new, whether it is a font, a game or my website.
-                    </p>
-                    <p><a href="/about/">Read more</a></p>
+        <main>
+            <section id="home">
+                <div class="container">
+                    <div class="subcontainer">
+                        <div class="text-container">
+                            <h1 class="fit-h1">Hi I'm Chip</h1>
+
+                            <p>
+                                I'm a 15 year old freelance designer and
+                                developer based in Norway, and I have been
+                                programming since I was 8. When I'm not
+                                studying, I'm probably working on something new,
+                                whether it is a font, a game or my website.
+                            </p>
+                            <p><a href="/about/">Read more</a></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section id="gallery">
+                <div class="container">
+                    <div class="subcontainer">
+                        <h2 style="margin-bottom: 1rem">Personal work</h2>
+                        <div class="grid-row">
+                            <div class="grid-column">
+                                <div class="grid-item">
+                                    <a
+                                        href="https://www.behance.net/gallery/223035417/Skyline"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Skyline.jpg "
+                                            alt="Skyline"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Skyline.jpg "
+                                            alt="Skyline"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a href="/photos/cleo/">
+                                        <img
+                                            src="/assets/images/showcase/Cleo.jpg "
+                                            alt="Cleo"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Cleo.jpg "
+                                            alt="Cleo"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a
+                                        href="https://www.behance.net/gallery/222566643/Piano-Poster"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Piano.jpg "
+                                            alt="Piano"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Piano.jpg "
+                                            alt="Piano"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a
+                                        href="https://www.behance.net/gallery/221554775/Artifacts-Posters"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Artifacts.jpg "
+                                            alt="Artifacts"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Artifacts.jpg "
+                                            alt="Artifacts"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.gumroad.com/l/relay"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Relay.jpg "
+                                            alt="Relay"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Relay.jpg "
+                                            alt="Relay"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.itch.io/rudy-the-ravanger"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Rudy The Ravanger.jpg "
+                                            alt="Rudy The Ravanger"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Rudy The Ravanger.jpg "
+                                            alt="Rudy The Ravanger"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid-column">
+                                <div class="grid-item">
+                                    <a
+                                        href="https://www.behance.net/gallery/222218947/Hand-Poster"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Hand.jpg "
+                                            alt="Hand"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Hand.jpg "
+                                            alt="Hand"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a
+                                        href="https://www.behance.net/gallery/222218751/Unseen-Poster"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Unseen.jpg "
+                                            alt="Circuit"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Unseen.jpg "
+                                            alt="Circuit"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.gumroad.com/l/quixly"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Quixly.jpg "
+                                            alt="Quixly"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Quixly.jpg "
+                                            alt="Quixly"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a
+                                        href="https://www.behance.net/gallery/221554641/Sticky-Orange-Posters"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Sticky Orange.jpg "
+                                            alt="Sticky Orange"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Sticky Orange.jpg "
+                                            alt="Sticky Orange"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.gumroad.com/l/circuit"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Circuit.jpg "
+                                            alt="Circuit"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Circuit.jpg "
+                                            alt="Circuit"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="grid-item">
+                                    <a
+                                        href="https://chipcord.itch.io/flower-finder"
+                                    >
+                                        <img
+                                            src="/assets/images/showcase/Flowerfinder.jpg "
+                                            alt="Flowerfinder"
+                                            class="grid-image base"
+                                        />
+                                        <img
+                                            src="/assets/images/showcase-2/Flowerfinder.jpg "
+                                            alt="Flowerfinder"
+                                            class="grid-image hover"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
         <!-- Using Lenis to smooth scroll -->
         <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
         <script>
@@ -47,6 +272,15 @@
             }
 
             requestAnimationFrame(raf);
+        </script>
+        <!-- Fitty Script -->
+        <script src="https://cdn.jsdelivr.net/npm/fitty@2.3.6/dist/fitty.min.js"></script>
+        <script>
+            fitty(".fit-h1", {
+                minSize: 16,
+                maxSize: 80,
+                multiLine: false, // ensures single-line
+            });
         </script>
     </body>
 </html>

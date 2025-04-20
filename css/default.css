@@ -41,24 +41,43 @@
 body {
     background-color: var(--base-color);
     position: relative;
-    height: 100vh; /* Scrollable page, remove if you actually have content */
+}
+main {
+    min-height: 90vh;
 }
 a {
     color: var(--link-color);
 }
 h1 {
-    font-size: 5rem;
     font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: -0.05em;
+}
+.fit-h1 {
+    margin: 0;
+    white-space: nowrap;
+}
+h2 {
+    margin-top: 2rem;
+    color: var(--text-color);
+}
+h3 {
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: var(--text-color);
 }
 p {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: 400;
     color: var(--text-color);
 }
 #home {
     margin-top: 100px; /* This needs to be the same or more than the navbar thickness */
+    padding-bottom: 1rem;
+}
+#gallery {
     padding-bottom: 1rem;
 }
 .about-links {
@@ -68,8 +87,21 @@ p {
 .about-links p {
     margin: 0;
 }
-@media (max-width: 500px) {
-    h1 {
-        font-size: 18vw;
+.text-container {
+    max-width: 45vw;
+}
+.technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-bottom: 1rem;
+}
+.technologies p {
+    margin: 0;
+    text-decoration: underline;
+}
+@media (max-width: 1024px) {
+    .text-container {
+        max-width: none;
     }
 }

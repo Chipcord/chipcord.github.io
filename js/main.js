@@ -7,8 +7,17 @@ fetch("/html/header.html")
     document.body.insertBefore(header, document.body.firstChild);
 
     // ✅ Initialize features after header is in the DOM
-    initNavBar();
     initDarkMode();
+    initNavBar();
+  });
+
+fetch("/html/footer.html")
+  .then((res) => res.text())
+  .then((data) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, "text/html");
+    const footer = doc.querySelector("footer");
+    document.body.appendChild(footer);
   });
 
 function initNavBar() {
@@ -31,6 +40,13 @@ function initNavBar() {
     if (isOpening) {
       navMenu.classList.add("active");
 
+      document.body.addEventListener("touchmove", preventScroll, {
+        passive: false,
+      });
+      function preventScroll(e) {
+        e.preventDefault();
+      }
+
       setTimeout(() => {
         navLinks.forEach((link) => link.classList.add("active"));
       }, 200);
@@ -38,6 +54,7 @@ function initNavBar() {
       navLinks.forEach((link) => link.classList.remove("active"));
 
       setTimeout(() => {
+        document.body.removeEventListener("touchmove", preventScroll);
         navMenu.classList.remove("active");
       }, 300);
     }
@@ -83,15 +100,16 @@ function initDarkMode() {
 
   if (darkmode === "active") {
     enableDarkmode();
-  } else if (darkmode === null) {
-    // Check system preference
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    if (prefersDark) {
-      enableDarkmode();
-    }
   }
+  // else if (darkmode === null) {
+  //   // Check system preference
+  //   const prefersDark = window.matchMedia(
+  //     "(prefers-color-scheme: dark)",
+  //   ).matches;
+  //   if (prefersDark) {
+  //     enableDarkmode();
+  //   }
+  // }
 
   if (themeSwitch) {
     themeSwitch.addEventListener("click", () => {

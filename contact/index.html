@@ -6,18 +6,25 @@
         <title>Chip's Website</title>
         <link rel="stylesheet" href="/css/nav-bar.css" />
         <link rel="stylesheet" href="/css/default.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
         <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
         <!-- The header/nav-bar (and darkmode-theme) is injected into the code to maintain flexibility -->
-        <script src="/js/nav-bar.js" defer></script>
+        <script src="/js/main.js" defer></script>
         <style>
             @keyframes bounce {
                 0% {
                     transform: translateY(0);
                 }
-                30% {
-                    transform: translateY(-10px);
+                20% {
+                    transform: translateY(-20px);
+                }
+                40% {
+                    transform: translateY(10px);
                 }
                 60% {
+                    transform: translateY(-10px);
+                }
+                80% {
                     transform: translateY(5px);
                 }
                 100% {
@@ -26,32 +33,65 @@
             }
 
             .bounce {
-                animation: bounce 0.4s ease;
+                animation: bounce 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
         </style>
     </head>
     <body>
-        <section id="home">
-            <div class="container">
-                <div class="subcontainer">
-                    <h1>Contact</h1>
+        <main>
+            <section id="home">
+                <div class="container">
+                    <div class="subcontainer">
+                        <h1 class="fit-h1">Contact</h1>
 
-                    <p>Send an email, I'll answer within 14 buisness days.</p>
-                    <div class="about-links">
-                        <h2
-                            id="email"
-                            style="
-                                cursor: pointer;
-                                color: var(--text-color);
-                                text-decoration: underline;
-                            "
-                        >
-                            chipcord@duck.com
-                        </h2>
+                        <div class="text-container">
+                            <p>
+                                You can either send an email to contact me, or
+                                visit one of my social medias :)
+                            </p>
+                            <h2
+                                id="email"
+                                style="
+                                    cursor: pointer;
+                                    color: var(--text-color);
+                                    text-decoration: underline;
+                                    font-style: italic;
+                                    margin: 0;
+                                "
+                            >
+                                chipcord@duck.com
+                            </h2>
+                            <h2
+                                id="email"
+                                style="
+                                    cursor: pointer;
+                                    color: var(--text-color);
+                                    text-decoration: underline;
+                                    font-style: italic;
+                                    margin: 0;
+                                "
+                            >
+                                <a href="https://www.behance.net/chipcord#"
+                                    >Behance</a
+                                >
+                            </h2>
+                            <h2
+                                id="email"
+                                style="
+                                    cursor: pointer;
+                                    color: var(--text-color);
+                                    text-decoration: underline;
+                                    font-style: italic;
+                                    margin: 0;
+                                "
+                            >
+                                <a href="https://github.com/Chipcord">Github</a>
+                            </h2>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
         <!-- Using Lenis to smooth scroll -->
         <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
         <script>
@@ -75,5 +115,14 @@
             requestAnimationFrame(raf);
         </script>
         <script src="/js/copy-to-clipboard.js" defer></script>
+        <!-- Fitty Script -->
+        <script src="https://cdn.jsdelivr.net/npm/fitty@2.3.6/dist/fitty.min.js"></script>
+        <script>
+            fitty(".fit-h1", {
+                minSize: 16,
+                maxSize: 80,
+                multiLine: false, // ensures single-line
+            });
+        </script>
     </body>
 </html>
