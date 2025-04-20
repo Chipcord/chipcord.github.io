@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>License</title>
+        <link rel="stylesheet" href="/css/default.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
+        <link rel="stylesheet" href="/css/nav-bar.css" />
+        <link rel="stylesheet" href="/css/grid.css" />
+        <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+        <script>
+            /* Apparently an empty script tag reduces firefox FOUC bug */
+        </script>
+        <!-- Some html is injected into the code to maintain flexibility -->
+        <script src="/js/main.js" defer></script>
+        <script src="/js/fadein.js" defer></script>
+    </head>
+
+    <body>
+        <main>
+            <section id="home">
+                <div class="container">
+                    <div class="subcontainer">
+                        <div class="text-container">
+                            <h1 class="fit-h1">Chip Font License(CFL) V1</h1>
+
+                            <h2>LICENSE AGREEMENT</h2>
+                            <p>
+                                This License Agreement (“Agreement”) is a legally binding contract between you (“Licensee”) and Chip (“Licensor”) governing the use of the Font Software.
+                            </p>
+
+                            <h2>GRANT OF LICENSE</h2>
+                            <p>
+                                The Licensor hereby grants the Licensee a non-exclusive, non-transferable, and non-sublicensable license to use the Font Software for both personal and commercial purposes, including but not limited to:
+                            </p>
+
+                            <h3>
+                                • Branding, logo, and trademark design
+
+                            </h3>
+                            <h3>
+                                • Advertising and marketing materials
+
+                            </h3>
+                            <h3>
+                                • Packaging and product design
+
+                            </h3>
+                            <h3>
+                                • Print and digital publications
+
+                            </h3>
+                            <h3>
+                                • Video, multimedia, and social media content
+
+                            </h3>
+                            <h3>
+                                • Websites and web applications (including @font-face embedding)
+
+                            </h3>
+                            <h3>
+                                • Mobile or desktop application embedding
+
+                            </h3>
+                            <h3>
+                                • PDF and eBook embedding
+
+                            </h3>
+
+
+                            <h2>RESTRICTIONS</h2>
+                            <p>
+                                You may not do the following without prior written permission from the Licensor:
+                            </p>
+                            <h3>
+                                • Sell, resell, or sublicense the Font Software on its own or as part of a font collection
+
+                            </h3>
+                            <h3>
+                                • Redistribute or repackage the Font Software as a standalone product (free or paid)
+
+                            </h3>
+                            <h3>
+                                • Modify, adapt, alter, translate, reverse engineer, decompile, disassemble, or create derivative works based on the Font Software
+
+                            </h3>
+                            <h3>
+                                • Circumvent or violate the terms of this license in any manner
+
+                            </h3>
+
+
+
+                            <h2>REDISTRIBUTION CLAUSE</h2>
+                            <p>
+                                Redistribution of the Font Software (whether modified or unmodified) is not permitted, except:
+                            </p>
+                            </h3>
+                            <h3>
+                                • When embedded in a document, application, website, or other digital product as part of your project deliverables, and
+
+
+                            </h3>
+                            <h3>
+                                • As long as the Font Software is not offered as a standalone downloadable file
+
+
+                            </h3>
+
+
+
+
+                            <h2>MODIFICATIONS AND DERIVATIVES</h2>
+                            <p>
+                                The creation of Modified Versions of the Font Software is strictly prohibited. You may not create or distribute modified, adapted, or renamed versions of this font, even for personal use.
+
+                            </p>
+
+
+                            <h2>INTELLECTUAL PROPERTY & RESERVED FONT NAME</h2>
+                            <p>
+                                The “[Font Name]” is a Reserved Font Name and may not be used for any derivative works, forks, or modified distributions, even if permission to modify is granted in future versions of this license.
+
+                            </p>
+                            <h2>TERMINATION</h2>
+                            <p>
+                                This license shall terminate automatically if you fail to comply with any of its terms. Upon termination, you must cease all use of the Font Software and delete all copies.
+
+                            </p>
+
+
+
+                            </p>
+                            <h2>DISCLAIMER OF WARRANTY</h2>
+                            <p>
+                                The Font Software is provided “as is”, without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+
+                                In no event shall the Licensor be liable for any damages arising from the use or inability to use the Font Software, including but not limited to loss of profits, data, or business interruption.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Using Lenis to smooth scroll -->
+        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
+        <script>
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smooth: true,
+                direction: "vertical",
+                gestureDirection: "vertical",
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+        </script>
+        <!-- Fitty Script -->
+        <script src="https://cdn.jsdelivr.net/npm/fitty@2.3.6/dist/fitty.min.js"></script>
+        <script>
+            fitty(".fit-h1", {
+                minSize: 16,
+                maxSize: 80,
+                multiLine: false, // ensures single-line
+            });
+        </script>
+    </body>
+
+
+
+</html>
