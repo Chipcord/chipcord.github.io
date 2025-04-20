@@ -54,8 +54,9 @@ function initNavBar() {
     } else {
       navLinks.forEach((link) => link.classList.remove("active"));
 
+      document.body.removeEventListener("touchmove", preventScroll);
+
       setTimeout(() => {
-        document.body.removeEventListener("touchmove", preventScroll);
         navMenu.classList.remove("active");
       }, 300);
     }
